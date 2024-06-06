@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8sic1m5gkj3k"
-path="res://.godot/imported/ShopInnen.png-51b9a8f66ccd437f44b6575ea0fb7a77.ctex"
+uid="uid://bvy83fx14imga"
+path="res://.godot/imported/Cave1.png-4a38e72b0b9ad4c57636279d227e0416.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ground/InBuilding/ShopInnen.png"
-dest_files=["res://.godot/imported/ShopInnen.png-51b9a8f66ccd437f44b6575ea0fb7a77.ctex"]
+source_file="res://Sprites/Objekts/Caves/Cave1.png"
+dest_files=["res://.godot/imported/Cave1.png-4a38e72b0b9ad4c57636279d227e0416.ctex"]
 
 [params]
 
