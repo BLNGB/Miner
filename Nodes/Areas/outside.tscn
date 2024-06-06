@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cyvacvvubsj6q"]
+[gd_scene load_steps=9 format=3 uid="uid://cyvacvvubsj6q"]
 
 [ext_resource type="Texture2D" uid="uid://uxphuyiciigx" path="res://Sprites/Ground/Outside/GraßUndWeg.png" id="1_ftflb"]
+[ext_resource type="Script" path="res://Nodes/Areas/outside.gd" id="1_xcqbh"]
 [ext_resource type="PackedScene" uid="uid://55koddjtc6jy" path="res://Nodes/Player/Player.tscn" id="2_ilwii"]
 [ext_resource type="PackedScene" uid="uid://co811uw06hg7c" path="res://Nodes/Objekts/Hauser/shop.tscn" id="3_y4m8j"]
+[ext_resource type="PackedScene" uid="uid://b522velognj30" path="res://Nodes/Objekts/Ores/common_ore_c_1.tscn" id="5_54bjq"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_alr20"]
 
@@ -112,6 +114,7 @@ physics_layer_0/physics_material = SubResource("PhysicsMaterial_alr20")
 sources/0 = SubResource("TileSetAtlasSource_odpsf")
 
 [node name="Outside" type="Node2D"]
+script = ExtResource("1_xcqbh")
 
 [node name="Ground" type="Node2D" parent="."]
 
@@ -122,6 +125,9 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 71, 131072, 0, 2621511, 131072, 2,
 
 [node name="Shop" parent="." instance=ExtResource("3_y4m8j")]
 position = Vector2(88, 560)
+
+[node name="CommonOreC1" parent="." instance=ExtResource("5_54bjq")]
+position = Vector2(135, 256)
 
 [node name="Player" parent="." instance=ExtResource("2_ilwii")]
 position = Vector2(487, 390)
