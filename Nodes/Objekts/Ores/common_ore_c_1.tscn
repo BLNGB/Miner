@@ -14,5 +14,5 @@ shape = SubResource("CircleShape2D_lr8eq")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-4, -1, -4, 4, -3, 4, -3, 5, 3, 5, 3, 4, 4, 4, 4, 0, 3, 0, 3, -1)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Cave1" type="Sprite2D" parent="."]
 texture = ExtResource("1_5mmsw")
