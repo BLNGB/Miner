@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://co811uw06hg7c"]
+
+[ext_resource type="Texture2D" uid="uid://dtbvt71ybukqg" path="res://Sprites/Objekts/Hauser/Shop.png" id="1_20oci"]
+
+[node name="Shop" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_20oci")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-24, 43, -6, 43, 6, 43, 24, 43, 24, 28, 30, 28, 30, 8, 38, 8, 38, -11, 1, -48, -1, -48, -38, -11, -38, 8, -30, 8, -30, 28, -24, 28)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-5, 48, -5, 34, -3, 32, 3, 32, 5, 34, 5, 48)

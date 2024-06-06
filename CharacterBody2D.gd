@@ -1,5 +1,5 @@
 extends CharacterBody2D
-const SPEED = 150.0
+const SPEED = 100.0
 func _ready():
 	$AnimationPlayer.play("Idle")
 func _physics_process(delta):
