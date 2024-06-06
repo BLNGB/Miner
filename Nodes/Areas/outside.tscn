@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 [gd_scene load_steps=9 format=3 uid="uid://cyvacvvubsj6q"]
+=======
+[gd_scene load_steps=8 format=3 uid="uid://cyvacvvubsj6q"]
+>>>>>>> 0b13d5169f5340bdf7b13ec598889caca97ac296
 
 [ext_resource type="Texture2D" uid="uid://uxphuyiciigx" path="res://Sprites/Ground/Outside/GraßUndWeg.png" id="1_ftflb"]
 [ext_resource type="Script" path="res://Nodes/Areas/outside.gd" id="1_xcqbh"]
 [ext_resource type="PackedScene" uid="uid://55koddjtc6jy" path="res://Nodes/Player/Player.tscn" id="2_ilwii"]
 [ext_resource type="PackedScene" uid="uid://co811uw06hg7c" path="res://Nodes/Objekts/Hauser/shop.tscn" id="3_y4m8j"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://b522velognj30" path="res://Nodes/Objekts/Ores/common_ore_c_1.tscn" id="5_54bjq"]
+=======
+[ext_resource type="PackedScene" uid="uid://bqapwy2eg2vwf" path="res://Nodes/Objekts/Caves/cave.tscn" id="4_lbt7u"]
+>>>>>>> 0b13d5169f5340bdf7b13ec598889caca97ac296
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_alr20"]
 
@@ -131,3 +139,6 @@ position = Vector2(135, 256)
 
 [node name="Player" parent="." instance=ExtResource("2_ilwii")]
 position = Vector2(487, 390)
+
+[node name="Cave" parent="." instance=ExtResource("4_lbt7u")]
+position = Vector2(207, 489)
