@@ -193,8 +193,8 @@ tile_set = SubResource("TileSet_3ssry")
 format = 2
 layer_0/tile_data = PackedInt32Array(131075, 327680, 4, 131074, 262144, 4, 131076, 327680, 4, 131077, 327680, 4, 131078, 327680, 4, 131079, 327680, 4, 131080, 327680, 4, 131082, 393216, 4, 131081, 327680, 4, 65546, 393216, 3, 65538, 393216, 3, 65542, 131072, 3, 65545, 131072, 3, 65539, 131072, 3, 11, 0, 3, 1, 0, 3, 458758, 65536, 3)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_xf14c")]
-position = Vector2(103, 101)
-
 [node name="ShopStairs" parent="." instance=ExtResource("3_gmal3")]
 position = Vector2(104, 118)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_xf14c")]
+position = Vector2(103, 101)
