@@ -20,7 +20,7 @@ sources/0 = SubResource("TileSetAtlasSource_enpo4")
 [node name="TileMap" type="TileMap" parent="Ground"]
 tile_set = SubResource("TileSet_mg3r3")
 format = 2
-layer_0/tile_data = PackedInt32Array(-65464, 0, 0, -1, 0, 0, 2687048, 0, 0, 2752511, 0, 0)
+layer_0/tile_data = PackedInt32Array(-1, 0, 0, 2687048, 0, 0)
 script = ExtResource("1_bjjuf")
 
 [node name="Player" parent="." instance=ExtResource("1_tk6ep")]
