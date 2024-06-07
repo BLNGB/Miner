@@ -18,59 +18,64 @@ position = Vector2(48, 48)
 scale = Vector2(2, 2)
 texture = ExtResource("2_0q5d0")
 
+[node name="CommonL" type="Label" parent="CommonS"]
+offset_left = 16.0
+offset_top = -4.0
+offset_right = 26.0
+offset_bottom = 19.0
+scale = Vector2(0.5, 0.5)
+text = "0"
+
 [node name="UncommonS" type="Sprite2D" parent="."]
 position = Vector2(48, 88)
 scale = Vector2(2, 2)
 texture = ExtResource("3_3u86r")
+
+[node name="UncommonL" type="Label" parent="UncommonS"]
+offset_left = 16.0
+offset_top = -4.0
+offset_right = 26.0
+offset_bottom = 19.0
+scale = Vector2(0.5, 0.5)
+text = "0"
 
 [node name="RareS" type="Sprite2D" parent="."]
 position = Vector2(48, 128)
 scale = Vector2(2, 2)
 texture = ExtResource("4_t3yhd")
 
+[node name="RareL" type="Label" parent="RareS"]
+offset_left = 16.0
+offset_top = -4.0
+offset_right = 26.0
+offset_bottom = 19.0
+scale = Vector2(0.5, 0.5)
+text = "0"
+
 [node name="EpicS" type="Sprite2D" parent="."]
 position = Vector2(48, 168)
 scale = Vector2(2, 2)
 texture = ExtResource("5_178pu")
+
+[node name="EpicL" type="Label" parent="EpicS"]
+offset_left = 16.0
+offset_top = -4.0
+offset_right = 26.0
+offset_bottom = 19.0
+scale = Vector2(0.5, 0.5)
+text = "0"
 
 [node name="LegendaryS" type="Sprite2D" parent="."]
 position = Vector2(48, 208)
 scale = Vector2(2, 2)
 texture = ExtResource("6_vnprd")
 
-[node name="CommonL" type="Label" parent="."]
-offset_left = 80.0
-offset_top = 40.0
-offset_right = 90.0
-offset_bottom = 63.0
-text = "0"
-
-[node name="UncommonL" type="Label" parent="."]
-offset_left = 80.0
-offset_top = 80.0
-offset_right = 90.0
-offset_bottom = 103.0
-text = "0"
-
-[node name="RareL" type="Label" parent="."]
-offset_left = 80.0
-offset_top = 120.0
-offset_right = 90.0
-offset_bottom = 143.0
-text = "0"
-
-[node name="EpicL" type="Label" parent="."]
-offset_left = 80.0
-offset_top = 160.0
-offset_right = 90.0
-offset_bottom = 183.0
-text = "0"
-
-[node name="LegendaryL" type="Label" parent="."]
-offset_left = 80.0
-offset_top = 200.0
-offset_right = 90.0
-offset_bottom = 223.0
+[node name="LegendaryL" type="Label" parent="LegendaryS"]
+offset_left = 16.0
+offset_top = -4.0
+offset_right = 26.0
+offset_bottom = 19.0
+scale = Vector2(0.5, 0.5)
 text = "0"
 
 [node name="Strength" type="TextureButton" parent="."]
@@ -81,6 +86,15 @@ offset_bottom = 432.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("7_sfpix")
 
+[node name="StrengthL" type="Label" parent="Strength"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 4.0
+offset_right = 60.0
+offset_bottom = 27.0
+scale = Vector2(0.5, 0.5)
+text = "Lvl"
+
 [node name="Value" type="TextureButton" parent="."]
 offset_left = 32.0
 offset_top = 456.0
@@ -89,6 +103,15 @@ offset_bottom = 472.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("8_7fmdw")
 
+[node name="ValueL" type="Label" parent="Value"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 4.0
+offset_right = 60.0
+offset_bottom = 27.0
+scale = Vector2(0.5, 0.5)
+text = "Lvl"
+
 [node name="Speed" type="TextureButton" parent="."]
 offset_left = 32.0
 offset_top = 496.0
@@ -96,3 +119,16 @@ offset_right = 48.0
 offset_bottom = 512.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("9_63nlo")
+
+[node name="SpeedL" type="Label" parent="Speed"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 4.0
+offset_right = 60.0
+offset_bottom = 27.0
+scale = Vector2(0.5, 0.5)
+text = "Lvl"
+
+[connection signal="pressed" from="Strength" to="." method="_on_strength_pressed"]
+[connection signal="pressed" from="Value" to="." method="_on_value_pressed"]
+[connection signal="pressed" from="Speed" to="." method="_on_speed_pressed"]

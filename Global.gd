@@ -1,17 +1,17 @@
 extends Node
 
-var CommonOreCount = 50
-var UncommonOreCount = 30
-var RareOreCount = 20
-var EpicOreCount = 10
+var CommonOreCount = 1
+var UncommonOreCount = 1
+var RareOreCount = 1
+var EpicOreCount = 1
 var LegendaryOreCount = 1
 
-var CommonOreChance
-var UncommonOreChance
-var RareOreChance
-var EpicOreChance
-var LegendaryOreChance
+var CommonOreChance = 1
+var UncommonOreChance = 1
+var RareOreChance = 1
+var EpicOreChance = 1
+var LegendaryOreChance = 1
 
-var StrengthLvl
-var ValueLvl
-var SpeedLvl
+var StrengthLvl = 1
+var ValueLvl = 1
+var SpeedLvl = 1
