@@ -5,6 +5,7 @@ var directionX
 var directionY
 
 func _ready():
+	position = Global.PositionOutside
 	var tilemap_rect = get_parent().get_node("Ground").get_node("TileMap").get_used_rect()
 	var tilemap_cell_size = get_parent().get_node("Ground").get_node("TileMap").tile_set.tile_size 
 	$Camera2D.limit_left = (tilemap_rect.position.x * tilemap_cell_size.x) -100

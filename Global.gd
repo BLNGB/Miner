@@ -15,3 +15,5 @@ var LegendaryOreChance = 1
 var StrengthLvl = 1
 var ValueLvl = 1
 var SpeedLvl = 1
+
+var PositionOutside = Vector2(500,500)
