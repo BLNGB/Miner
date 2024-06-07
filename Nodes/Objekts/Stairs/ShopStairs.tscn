@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://nmgd08mg1s74"]
+
+[ext_resource type="Texture2D" uid="uid://bp5qrmjtox40x" path="res://Sprites/Objekts/Stairs/Stairs.png" id="1_1w2uw"]
+[ext_resource type="Script" path="res://Nodes/Objekts/Stairs/ShopStairs.gd" id="1_85o0r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_32fwt"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkbrd"]
+size = Vector2(20, 19)
+
+[node name="ShopStairs" type="StaticBody2D"]
+script = ExtResource("1_85o0r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1w2uw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_32fwt")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_wkbrd")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
