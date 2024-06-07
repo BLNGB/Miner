@@ -1,0 +1,98 @@
+[gd_scene load_steps=10 format=3 uid="uid://c3g3u8e8rn51w"]
+
+[ext_resource type="Script" path="res://Nodes/Ui/UI.gd" id="1_yrinb"]
+[ext_resource type="Texture2D" path="res://Sprites/Objekts/Ores/CommonOreIcon.png" id="2_0q5d0"]
+[ext_resource type="Texture2D" path="res://Sprites/Objekts/Ores/UncommonOreIcon.png" id="3_3u86r"]
+[ext_resource type="Texture2D" path="res://Sprites/Objekts/Ores/RareOreIcon.png" id="4_t3yhd"]
+[ext_resource type="Texture2D" path="res://Sprites/Objekts/Ores/EpicOreIcon.png" id="5_178pu"]
+[ext_resource type="Texture2D" path="res://Sprites/Objekts/Ores/LegendaryOreIcon.png" id="6_vnprd"]
+[ext_resource type="Texture2D" uid="uid://b2ao3bw451r4n" path="res://Sprites/Ui/StrenghtButton.png" id="7_sfpix"]
+[ext_resource type="Texture2D" uid="uid://c3b10rxdleswn" path="res://Sprites/Ui/ValueButton.png" id="8_7fmdw"]
+[ext_resource type="Texture2D" uid="uid://ehebr25e4gbn" path="res://Sprites/Ui/SpeedButton.png" id="9_63nlo"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_yrinb")
+
+[node name="CommonS" type="Sprite2D" parent="."]
+position = Vector2(48, 48)
+scale = Vector2(2, 2)
+texture = ExtResource("2_0q5d0")
+
+[node name="UncommonS" type="Sprite2D" parent="."]
+position = Vector2(48, 88)
+scale = Vector2(2, 2)
+texture = ExtResource("3_3u86r")
+
+[node name="RareS" type="Sprite2D" parent="."]
+position = Vector2(48, 128)
+scale = Vector2(2, 2)
+texture = ExtResource("4_t3yhd")
+
+[node name="EpicS" type="Sprite2D" parent="."]
+position = Vector2(48, 168)
+scale = Vector2(2, 2)
+texture = ExtResource("5_178pu")
+
+[node name="LegendaryS" type="Sprite2D" parent="."]
+position = Vector2(48, 208)
+scale = Vector2(2, 2)
+texture = ExtResource("6_vnprd")
+
+[node name="CommonL" type="Label" parent="."]
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 90.0
+offset_bottom = 63.0
+text = "0"
+
+[node name="UncommonL" type="Label" parent="."]
+offset_left = 80.0
+offset_top = 80.0
+offset_right = 90.0
+offset_bottom = 103.0
+text = "0"
+
+[node name="RareL" type="Label" parent="."]
+offset_left = 80.0
+offset_top = 120.0
+offset_right = 90.0
+offset_bottom = 143.0
+text = "0"
+
+[node name="EpicL" type="Label" parent="."]
+offset_left = 80.0
+offset_top = 160.0
+offset_right = 90.0
+offset_bottom = 183.0
+text = "0"
+
+[node name="LegendaryL" type="Label" parent="."]
+offset_left = 80.0
+offset_top = 200.0
+offset_right = 90.0
+offset_bottom = 223.0
+text = "0"
+
+[node name="Strength" type="TextureButton" parent="."]
+offset_left = 32.0
+offset_top = 416.0
+offset_right = 48.0
+offset_bottom = 432.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_sfpix")
+
+[node name="Value" type="TextureButton" parent="."]
+offset_left = 32.0
+offset_top = 456.0
+offset_right = 48.0
+offset_bottom = 472.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("8_7fmdw")
+
+[node name="Speed" type="TextureButton" parent="."]
+offset_left = 32.0
+offset_top = 496.0
+offset_right = 48.0
+offset_bottom = 512.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("9_63nlo")

@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cyvacvvubsj6q"]
+[gd_scene load_steps=10 format=3 uid="uid://cyvacvvubsj6q"]
 
 [ext_resource type="Texture2D" uid="uid://uxphuyiciigx" path="res://Sprites/Ground/Outside/GraßUndWeg.png" id="1_ftflb"]
 [ext_resource type="Script" path="res://Nodes/Areas/outside.gd" id="1_iofd8"]
 [ext_resource type="PackedScene" uid="uid://55koddjtc6jy" path="res://Nodes/Player/Player.tscn" id="2_ilwii"]
 [ext_resource type="PackedScene" uid="uid://co811uw06hg7c" path="res://Nodes/Objekts/Hauser/shop.tscn" id="3_y4m8j"]
 [ext_resource type="PackedScene" uid="uid://bqapwy2eg2vwf" path="res://Nodes/Objekts/Caves/cave.tscn" id="4_lbt7u"]
+[ext_resource type="PackedScene" uid="uid://c3g3u8e8rn51w" path="res://Nodes/Ui/ui.tscn" id="6_7wnte"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_alr20"]
 
@@ -131,3 +132,5 @@ position = Vector2(487, 390)
 
 [node name="Cave" parent="." instance=ExtResource("4_lbt7u")]
 position = Vector2(207, 489)
+
+[node name="UI" parent="." instance=ExtResource("6_7wnte")]
