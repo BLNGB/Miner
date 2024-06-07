@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bqapwy2eg2vwf"]
 
-[ext_resource type="Script" path="res://Cave.gd" id="1_25kgl"]
-[ext_resource type="Texture2D" uid="uid://bvy83fx14imga" path="res://Sprites/Objekts/Caves/Cave1.png" id="2_1wrcp"]
+[ext_resource type="Script" path="res://Nodes/Objekts/Caves/Cave.gd" id="1_25kgl"]
+[ext_resource type="Texture2D" uid="uid://srrgbjh1nwn0" path="res://Sprites/Objekts/Caves/Cave1.png" id="2_1wrcp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h035w"]
 size = Vector2(33, 30)

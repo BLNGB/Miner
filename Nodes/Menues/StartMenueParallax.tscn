@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dog5tx7yt30cj"]
 
-[ext_resource type="Script" path="res://ParallaxBackground.gd" id="1_hq011"]
+[ext_resource type="Script" path="res://Nodes/Menues/StartMenueParallax.gd" id="1_hq011"]
 [ext_resource type="Texture2D" uid="uid://cbku3usdrl0eo" path="res://Sprites/Menues/Background/Background Start menu.png" id="2_bmbfy"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]

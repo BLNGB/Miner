@@ -1,14 +1,16 @@
 [gd_scene load_steps=10 format=3 uid="uid://c3g3u8e8rn51w"]
 
 [ext_resource type="Script" path="res://Nodes/Ui/UI.gd" id="1_yrinb"]
-[ext_resource type="Texture2D" uid="uid://c82l4xk5yls6o" path="res://Sprites/Ui/CommonOreIcon.png" id="2_0q5d0"]
-[ext_resource type="Texture2D" uid="uid://vsutrjco2akv" path="res://Sprites/Ui/UncommonOreIcon.png" id="3_3u86r"]
-[ext_resource type="Texture2D" uid="uid://ccsbwxqhwdbvq" path="res://Sprites/Ui/RareOreIcon.png" id="4_t3yhd"]
-[ext_resource type="Texture2D" uid="uid://d0larhe6ol587" path="res://Sprites/Ui/EpicOreIcon.png" id="5_178pu"]
-[ext_resource type="Texture2D" uid="uid://dyq2iat0dfmow" path="res://Sprites/Ui/LegendaryOreIcon.png" id="6_vnprd"]
+[ext_resource type="Texture2D" uid="uid://c82l4xk5yls6o" path="res://Sprites/Objekts/Ores/CommonOrs/CommonOreIcon.png" id="2_0q5d0"]
+[ext_resource type="Texture2D" uid="uid://dkflrxq8v6ify" path="res://Sprites/Objekts/Ores/LegendaryOrs/LegendaryOreIcon.png" id="4_0ikb5"]
+[ext_resource type="Texture2D" uid="uid://d0larhe6ol587" path="res://Sprites/Objekts/Ores/EpicOrs/EpicOreIcon.png" id="5_178pu"]
 [ext_resource type="Texture2D" uid="uid://b2ao3bw451r4n" path="res://Sprites/Ui/StrenghtButton.png" id="7_sfpix"]
 [ext_resource type="Texture2D" uid="uid://c3b10rxdleswn" path="res://Sprites/Ui/ValueButton.png" id="8_7fmdw"]
 [ext_resource type="Texture2D" uid="uid://ehebr25e4gbn" path="res://Sprites/Ui/SpeedButton.png" id="9_63nlo"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aop6x"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8mm6s"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_yrinb")
@@ -29,7 +31,7 @@ text = "0"
 [node name="UncommonS" type="Sprite2D" parent="."]
 position = Vector2(48, 88)
 scale = Vector2(2, 2)
-texture = ExtResource("3_3u86r")
+texture = SubResource("CompressedTexture2D_aop6x")
 
 [node name="UncommonL" type="Label" parent="UncommonS"]
 offset_left = 16.0
@@ -42,7 +44,7 @@ text = "0"
 [node name="RareS" type="Sprite2D" parent="."]
 position = Vector2(48, 128)
 scale = Vector2(2, 2)
-texture = ExtResource("4_t3yhd")
+texture = SubResource("CompressedTexture2D_8mm6s")
 
 [node name="RareL" type="Label" parent="RareS"]
 offset_left = 16.0
@@ -68,7 +70,7 @@ text = "0"
 [node name="LegendaryS" type="Sprite2D" parent="."]
 position = Vector2(48, 208)
 scale = Vector2(2, 2)
-texture = ExtResource("6_vnprd")
+texture = ExtResource("4_0ikb5")
 
 [node name="LegendaryL" type="Label" parent="LegendaryS"]
 offset_left = 16.0

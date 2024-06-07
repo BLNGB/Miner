@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://b6njrxu6byue4" path="res://Sprites/Ground/InCaves/Cave boden 1.png" id="2_cbw5b"]
 [ext_resource type="PackedScene" uid="uid://55koddjtc6jy" path="res://Nodes/Player/Player.tscn" id="2_s16ha"]
-[ext_resource type="Script" path="res://Nodes/Areas/TileMap.gd" id="2_w28gr"]
-[ext_resource type="Script" path="res://Nodes/Objekts/Caves/oreGen.gd" id="4_xwg2s"]
+[ext_resource type="Script" path="res://Nodes/Ground/TileMap.gd" id="2_w28gr"]
 [ext_resource type="PackedScene" uid="uid://c3g3u8e8rn51w" path="res://Nodes/Ui/ui.tscn" id="5_4wafw"]
+[ext_resource type="PackedScene" uid="uid://cppcmkv1oiim3" path="res://Nodes/Objekts/Ores/OreGen.tscn" id="5_ukmqm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jx0nb"]
 resource_name = "cave_1"
@@ -28,7 +28,6 @@ script = ExtResource("2_w28gr")
 [node name="Player" parent="." instance=ExtResource("2_s16ha")]
 position = Vector2(31, 24)
 
-[node name="oreGen" type="StaticBody2D" parent="."]
-script = ExtResource("4_xwg2s")
-
 [node name="UI" parent="." instance=ExtResource("5_4wafw")]
+
+[node name="oreGen" parent="." instance=ExtResource("5_ukmqm")]
