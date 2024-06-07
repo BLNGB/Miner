@@ -19,4 +19,4 @@ polygon = PackedVector2Array(-4, -1, -4, 4, -3, 4, -3, 5, 3, 5, 3, 4, 4, 4, 4, 0
 texture = ExtResource("1_b0ful")
 script = ExtResource("1_upwjb")
 
-[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
+[connection signal="tree_entered" from="EpicOre" to="EpicOre" method="_on_tree_entered"]
