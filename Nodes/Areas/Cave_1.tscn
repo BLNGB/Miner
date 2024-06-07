@@ -1,11 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://drku52586jxrr"]
+[gd_scene load_steps=8 format=3 uid="uid://drku52586jxrr"]
 
 [ext_resource type="Texture2D" uid="uid://b6njrxu6byue4" path="res://Sprites/Ground/InCaves/Cave boden 1.png" id="2_cbw5b"]
 [ext_resource type="PackedScene" uid="uid://55koddjtc6jy" path="res://Nodes/Player/Player.tscn" id="2_s16ha"]
-[ext_resource type="Script" path="res://Nodes/Areas/TileMap.gd" id="2_w28gr"]
+[ext_resource type="Script" path="res://Nodes/Ground/TileMap.gd" id="2_w28gr"]
+[ext_resource type="PackedScene" uid="uid://c3g3u8e8rn51w" path="res://Nodes/Ui/ui.tscn" id="5_4wafw"]
+[ext_resource type="PackedScene" uid="uid://cppcmkv1oiim3" path="res://Nodes/Objekts/Ores/OreGen.tscn" id="5_ukmqm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jx0nb"]
+resource_name = "cave_1"
 texture = ExtResource("2_cbw5b")
+use_texture_padding = false
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_aopis"]
@@ -18,8 +22,12 @@ sources/1 = SubResource("TileSetAtlasSource_jx0nb")
 [node name="TileMap" type="TileMap" parent="Ground"]
 tile_set = SubResource("TileSet_aopis")
 format = 2
-layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 2, 1, 0, 65538, 1, 0, 65537, 1, 0, 65536, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 3, 1, 0, 65539, 1, 0, 131072, 1, 0, 4, 1, 0, 65540, 1, 0, 131076, 1, 0)
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 71, 1, 0, 2621511, 1, 0, 2621440, 1, 0)
 script = ExtResource("2_w28gr")
 
 [node name="Player" parent="." instance=ExtResource("2_s16ha")]
 position = Vector2(31, 24)
+
+[node name="UI" parent="." instance=ExtResource("5_4wafw")]
+
+[node name="oreGen" parent="." instance=ExtResource("5_ukmqm")]

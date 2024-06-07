@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcw22ocal33q6"]
+
+[ext_resource type="Texture2D" uid="uid://dlyarotj7blnw" path="res://Sprites/Objekts/Ores/EpicOrs/EpicOreC1.png" id="1_b0ful"]
+[ext_resource type="Script" path="res://Nodes/Objekts/Ores/EpicOre.gd" id="1_upwjb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lr8eq"]
+
+[node name="EpicOre" type="StaticBody2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_lr8eq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-4, -1, -4, 4, -3, 4, -3, 5, 3, 5, 3, 4, 4, 4, 4, 0, 3, 0, 3, -1)
+
+[node name="EpicOre" type="Sprite2D" parent="."]
+texture = ExtResource("1_b0ful")
+script = ExtResource("1_upwjb")
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
