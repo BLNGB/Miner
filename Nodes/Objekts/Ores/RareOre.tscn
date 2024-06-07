@@ -6,6 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_lr8eq"]
 
 [node name="RareOre" type="StaticBody2D"]
+script = ExtResource("2_n4tyh")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -17,6 +18,19 @@ polygon = PackedVector2Array(-4, -1, -4, 4, -3, 4, -3, 5, 3, 5, 3, 4, 4, 4, 4, 0
 
 [node name="RareOre" type="Sprite2D" parent="."]
 texture = ExtResource("1_7nqra")
-script = ExtResource("2_n4tyh")
 
-[connection signal="tree_entered" from="RareOre" to="RareOre" method="_on_tree_entered"]
+[node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 152.0
+offset_bottom = 19.0
+scale = Vector2(0.1, 0.1)
+value = 100.0
+fill_mode = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="tree_entered" from="RareOre" to="." method="_on_rare_ore_tree_entered"]
