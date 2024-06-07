@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b6njrxu6byue4" path="res://Sprites/Ground/InCaves/Cave boden 1.png" id="2_cbw5b"]
 [ext_resource type="PackedScene" uid="uid://55koddjtc6jy" path="res://Nodes/Player/Player.tscn" id="2_s16ha"]
-[ext_resource type="Script" path="res://Nodes/Areas/CaveGroundGen.gd" id="2_w28gr"]
+[ext_resource type="Script" path="res://Nodes/Objekts/Caves/CaveGroundGen.gd" id="2_w28gr"]
 [ext_resource type="Script" path="res://Nodes/Areas/oreGen.gd" id="4_xwg2s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jx0nb"]
@@ -21,6 +21,7 @@ sources/1 = SubResource("TileSetAtlasSource_jx0nb")
 [node name="TileMap" type="TileMap" parent="Ground"]
 tile_set = SubResource("TileSet_aopis")
 format = 2
+layer_0/tile_data = PackedInt32Array(-1, 1, 0, 2752511, 1, 0, 2687048, 1, 0, -65464, 1, 0)
 script = ExtResource("2_w28gr")
 
 [node name="Player" parent="." instance=ExtResource("2_s16ha")]
