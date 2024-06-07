@@ -7,9 +7,9 @@ func _process(delta):
 	$EpicS/EpicL.text = str(Global.EpicOreCount)
 	$LegendaryS/LegendaryL.text = str(Global.LegendaryOreCount)
 	
-	$Strength/StrengthL.text = "Lvl " + str(Global.StrengthLvl)
-	$Value/ValueL.text = "Lvl " + str(Global.ValueLvl)
-	$Speed/SpeedL.text = "Lvl " + str(Global.SpeedLvl)
+	$Control/Strength/StrengthL.text = "Lvl " + str(Global.StrengthLvl)
+	$Control/Value/ValueL.text = "Lvl " + str(Global.ValueLvl)
+	$Control/Speed/SpeedL.text = "Lvl " + str(Global.SpeedLvl)
 
 
 

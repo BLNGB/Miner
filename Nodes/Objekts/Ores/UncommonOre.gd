@@ -4,20 +4,21 @@ extends StaticBody2D
 
 
 func _process(delta):
-	if Input.is_action_just_pressed("ui_attack") and $ProgressBar.visible == true and InDmgArea == true:
-		$ProgressBar.value = $ProgressBar.value - Global.StrengthLvl
-	if $ProgressBar.value != 100: 
-		$ProgressBar.visible = true
-	if $ProgressBar.value == 0:
+	$TextureProgressBar/Label.text = str($TextureProgressBar.value)
+	if Input.is_action_just_pressed("ui_attack") and $TextureProgressBar.visible == true and InDmgArea == true:
+		$TextureProgressBar.value = $TextureProgressBar.value - Global.StrengthLvl
+	if $TextureProgressBar.value != 100: 
+		$TextureProgressBar.visible = true
+	if $TextureProgressBar.value == 0:
 		Global.UncommonOreCount = Global.UncommonOreCount + 1
 		queue_free()
 
 func _on_area_2d_mouse_entered():
-	$ProgressBar.visible = true
+	$TextureProgressBar.visible = true
 
 
 func _on_area_2d_mouse_exited():
-	$ProgressBar.visible = false
+	$TextureProgressBar.visible = false
 
 
 func _on_area_2d_body_entered(body):
