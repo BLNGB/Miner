@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://de04ccwhxytr5"]
+[gd_scene load_steps=9 format=3 uid="uid://de04ccwhxytr5"]
 
 [ext_resource type="Texture2D" uid="uid://b8sic1m5gkj3k" path="res://Sprites/Ground/InBuilding/ShopInnen.png" id="1_gokl6"]
 [ext_resource type="PackedScene" uid="uid://55koddjtc6jy" path="res://Nodes/Player/Player.tscn" id="1_xf14c"]
+[ext_resource type="PackedScene" uid="uid://nmgd08mg1s74" path="res://Nodes/Objekts/Stairs/ShopStairs.tscn" id="3_gmal3"]
 
 [sub_resource type="GDScript" id="GDScript_qki2n"]
 script/source = "extends Node2D
@@ -191,6 +192,9 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 65536, 0, 2, 65536, 0, 3, 65536
 tile_set = SubResource("TileSet_3ssry")
 format = 2
 layer_0/tile_data = PackedInt32Array(131075, 327680, 4, 131074, 262144, 4, 131076, 327680, 4, 131077, 327680, 4, 131078, 327680, 4, 131079, 327680, 4, 131080, 327680, 4, 131082, 393216, 4, 131081, 327680, 4, 65546, 393216, 3, 65538, 393216, 3, 65542, 131072, 3, 65545, 131072, 3, 65539, 131072, 3, 11, 0, 3, 1, 0, 3, 458758, 65536, 3)
+
+[node name="ShopStairs" parent="." instance=ExtResource("3_gmal3")]
+position = Vector2(104, 118)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_xf14c")]
 position = Vector2(103, 101)
