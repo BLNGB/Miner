@@ -26,7 +26,7 @@ offset_top = -8.0
 offset_right = 152.0
 offset_bottom = 19.0
 scale = Vector2(0.1, 0.1)
-theme_override_colors/font_color = Color(0.999834, 0.346793, 0.28022, 1)
+theme_override_colors/font_color = Color(1, 0.427451, 0.356863, 1)
 value = 100.0
 fill_mode = 1
 
