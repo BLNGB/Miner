@@ -8,6 +8,15 @@ func _ready():
 
 
 	if get_parent().name == "Cave1":
+		
+
+		for i in range(1):
+			var CaveStairs = preload("res://Nodes/Objekts/Stairs/CaveStairs.tscn").instantiate()
+
+			rand_x = randf_range(0,1152)
+			rand_y = randf_range(0,650)
+			CaveStairs.global_position = Vector2(rand_x, rand_y)
+			add_child(CaveStairs)
 
 		for i in range(50):
 			var CommonOre = preload("res://Nodes/Objekts/Ores/CommonOre.tscn").instantiate()

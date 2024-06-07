@@ -2,6 +2,10 @@ extends TileMap
 
 var width = 100
 var height = 100
+
+var rand_x
+var rand_y
+
 @onready var player= get_parent().get_parent().get_child(1)
 # Called when the node enters the scene tree for the first time.
 func _ready():
