@@ -3,8 +3,6 @@ extends StaticBody2D
 var rand_x
 var rand_y
 
-#var $CommonOre = load("res://Sprites/Objekts/Ores/CommonOreC1.png")
-
 func _ready():
 	randomize()
 
