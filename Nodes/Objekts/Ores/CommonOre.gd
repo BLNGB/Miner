@@ -1,12 +1,8 @@
 extends StaticBody2D
 
-@onready var InDmgArea = false
-
 
 func _process(delta):
 	$TextureProgressBar/Label.text = str($TextureProgressBar.value)
-	if Input.is_action_just_pressed("ui_attack") and $TextureProgressBar.visible == true and InDmgArea == true:
-		$TextureProgressBar.value = $TextureProgressBar.value - Global.StrengthLvl
 	if $TextureProgressBar.value != 100: 
 		$TextureProgressBar.visible = true
 	if $TextureProgressBar.value == 0:
@@ -22,15 +18,11 @@ func _on_area_2d_mouse_exited():
 
 
 func _on_area_2d_body_entered(body):
-	if body.name == "Player":
-		InDmgArea = true
-
-
-func _on_area_2d_body_exited(body):
-	if body.name == "Player":
-		InDmgArea = false
-
-
+	print("Pickaxe")
+	if body.name == "Pickaxe":
+		print("Body war in fact Pickaxe")
+		$TextureProgressBar.value = $TextureProgressBar.value - Global.StrengthLvl
+		
 func _on_common_ore_tree_entered():
 	var scene = get_tree().current_scene.name
 		

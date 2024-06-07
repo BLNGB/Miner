@@ -4,6 +4,13 @@ const SPEED = 150.0
 var directionX
 var directionY
 
+
+func _process(delta):
+	$Pick.speed_scale = 1 + (Global.SpeedLvl / 100)
+	if Input.is_action_just_pressed("ui_attack"):
+		$Pick.play("Mine")
+
+
 func _ready():
 	position = Global.PositionOutside
 	var tilemap_rect = get_parent().get_node("Ground").get_node("TileMap").get_used_rect()

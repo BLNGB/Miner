@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnfjea2weyvwt"]
+
+[ext_resource type="Texture2D" uid="uid://c0x4kn08gqg7w" path="res://Sprites/Player/Tools/CommonPickaxe.png" id="1_slo33"]
+
+[node name="Pickaxe" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, -5)
+texture = ExtResource("1_slo33")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(5, -5)
+polygon = PackedVector2Array(-4, 6, -6, 6, -6, 4, -5, 4, -5, 3, -4, 3, -4, 2, -3, 2, -3, 1, -2, 1, -2, 0, -1, 0, -1, -1, 0, -1, 0, -2, 1, -2, 1, -3, 2, -3, 2, -4, 3, -4, 4, -4, 4, -3, 4, -2, 3, -2, 3, -1, 2, -1, 2, 0, 1, 0, 1, 1, 0, 1, 0, 2, -1, 2, -1, 3, -2, 3, -2, 4, -3, 4, -3, 5, -4, 5)
