@@ -13,7 +13,7 @@ config_version=5
 config/name="Miner"
 run/main_scene="res://Nodes/Menues/StartMenue.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://Sprites/Player/Player/Player.png"
+config/icon="res://GameIcon.png"
 
 [autoload]
 

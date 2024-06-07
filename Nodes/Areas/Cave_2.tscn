@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwx1gpmeh7mc3"]
+
+[ext_resource type="Script" path="res://Nodes/Ground/CaveGroundGen.gd" id="1_bjjuf"]
+[ext_resource type="PackedScene" uid="uid://55koddjtc6jy" path="res://Nodes/Player/Player.tscn" id="1_tk6ep"]
+[ext_resource type="Texture2D" uid="uid://b6njrxu6byue4" path="res://Sprites/Ground/InCaves/Cave boden 1.png" id="1_ymef5"]
+[ext_resource type="PackedScene" uid="uid://c3g3u8e8rn51w" path="res://Nodes/Ui/ui.tscn" id="2_luuyb"]
+[ext_resource type="PackedScene" uid="uid://cppcmkv1oiim3" path="res://Nodes/Objekts/Ores/OreGen.tscn" id="3_m8xf5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_enpo4"]
+texture = ExtResource("1_ymef5")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mg3r3"]
+sources/0 = SubResource("TileSetAtlasSource_enpo4")
+
+[node name="Cave2" type="Node2D"]
+
+[node name="Ground" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Ground"]
+tile_set = SubResource("TileSet_mg3r3")
+format = 2
+layer_0/tile_data = PackedInt32Array(-1, 0, 0, 2687048, 0, 0)
+script = ExtResource("1_bjjuf")
+
+[node name="Player" parent="." instance=ExtResource("1_tk6ep")]
+
+[node name="UI" parent="." instance=ExtResource("2_luuyb")]
+
+[node name="oreGen" parent="." instance=ExtResource("3_m8xf5")]
