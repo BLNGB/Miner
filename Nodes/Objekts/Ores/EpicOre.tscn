@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dcw22ocal33q6"]
+[gd_scene load_steps=6 format=3 uid="uid://dcw22ocal33q6"]
 
 [ext_resource type="Texture2D" uid="uid://dlyarotj7blnw" path="res://Sprites/Objekts/Ores/EpicOrs/EpicOreC1.png" id="1_b0ful"]
 [ext_resource type="Script" path="res://Nodes/Objekts/Ores/EpicOre.gd" id="1_upwjb"]
@@ -6,18 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://bqckq4fquf3ks" path="res://Sprites/Objekts/Ores/HPBarTop.png" id="4_0r58v"]
 [ext_resource type="Texture2D" uid="uid://dci1g67squfyb" path="res://Sprites/Objekts/Ores/HPBarBar.png" id="5_7g176"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lr8eq"]
-
 [node name="EpicOre" type="StaticBody2D"]
 script = ExtResource("1_upwjb")
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_lr8eq")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-5, -3, -5, 0, -4, 0, -4, 2, -5, 2, -5, 3, -4, 3, -4, 4, -3, 4, -3, 5, 3, 5, 3, 4, 5, 4, 5, 3, 4, 3, 4, 0, 3, 0, 3, -1, 4, -1, 4, -4, 3, -4, 3, -3, 2, -3, 2, -2, 1, -2, 1, -1, -3, -1, -3, -2, -4, -2, -4, -3)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-4, -1, -4, 4, -3, 4, -3, 5, 3, 5, 3, 4, 4, 4, 4, 0, 3, 0, 3, -1)
+polygon = PackedVector2Array(-4, 4, -3, 4, -3, 5, 3, 5, 3, 4, 4, 4, 5, 4, 5, 3, 4, 3, 4, 0, 3, 0, 3, -1, 4, -1, 4, -4, 3, -4, 3, -3, 2, -3, 2, -2, 1, -2, 1, -1, -3, -1, -3, -2, -4, -2, -4, -3, -5, -3, -5, 0, -4, 0, -4, 2, -5, 2, -5, 3, -4, 3)
 
 [node name="EpicOre" type="Sprite2D" parent="."]
 texture = ExtResource("1_b0ful")

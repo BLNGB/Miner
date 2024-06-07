@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlwxti4f621k"]
+[gd_scene load_steps=6 format=3 uid="uid://dlwxti4f621k"]
 
 [ext_resource type="Texture2D" uid="uid://byct2hobivbb1" path="res://Sprites/Objekts/Ores/CommonOrs/CommonOreC1.png" id="1_fassr"]
 [ext_resource type="Script" path="res://Nodes/Objekts/Ores/CommonOre.gd" id="2_p0uip"]
@@ -6,17 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://bqckq4fquf3ks" path="res://Sprites/Objekts/Ores/HPBarTop.png" id="4_brdpt"]
 [ext_resource type="Texture2D" uid="uid://dci1g67squfyb" path="res://Sprites/Objekts/Ores/HPBarBar.png" id="5_nsoxe"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lr8eq"]
-
 [node name="CommonOre" type="StaticBody2D"]
 script = ExtResource("2_p0uip")
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_lr8eq")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(-4, -1, -4, 4, -3, 4, -3, 5, 3, 5, 3, 4, 4, 4, 4, 0, 3, 0, 3, -1)
 
 [node name="CommonOre" type="Sprite2D" parent="."]
@@ -46,8 +41,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "100"
 
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-4, -1, 3, -1, 3, 0, 4, 0, 4, 4, 3, 4, 3, 5, -3, 5, -3, 4, -4, 4)
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="tree_entered" from="CommonOre" to="." method="_on_common_ore_tree_entered"]
