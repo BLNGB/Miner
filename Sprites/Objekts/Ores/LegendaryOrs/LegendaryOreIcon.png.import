@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y4ifl5ii228"
-path="res://.godot/imported/EpicOreC1.png-d351d0bd6b671d3a5e6b4adc610efe48.ctex"
+uid="uid://dkflrxq8v6ify"
+path="res://.godot/imported/LegendaryOreIcon.png-0336f9ef30c61fb6b2f09e32b0b852d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objekts/Ores/EpicOreC1.png"
-dest_files=["res://.godot/imported/EpicOreC1.png-d351d0bd6b671d3a5e6b4adc610efe48.ctex"]
+source_file="res://Sprites/Objekts/Ores/LegendaryOrs/LegendaryOreIcon.png"
+dest_files=["res://.godot/imported/LegendaryOreIcon.png-0336f9ef30c61fb6b2f09e32b0b852d0.ctex"]
 
 [params]
 

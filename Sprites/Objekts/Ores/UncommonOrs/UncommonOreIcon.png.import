@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh0b6kanjdd2e"
-path="res://.godot/imported/UncommonOreC1.png-a6f1d83704095fc9e6dee7c92e13a7f4.ctex"
+uid="uid://dhb7qei48ppg2"
+path="res://.godot/imported/UncommonOreIcon.png-1ac32b2b98e9e024c919aaa48322d978.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objekts/Ores/UncommonOreC1.png"
-dest_files=["res://.godot/imported/UncommonOreC1.png-a6f1d83704095fc9e6dee7c92e13a7f4.ctex"]
+source_file="res://Sprites/Objekts/Ores/UncommonOrs/UncommonOreIcon.png"
+dest_files=["res://.godot/imported/UncommonOreIcon.png-1ac32b2b98e9e024c919aaa48322d978.ctex"]
 
 [params]
 

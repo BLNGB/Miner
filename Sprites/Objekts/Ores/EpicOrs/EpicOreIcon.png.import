@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dagpfgcfqc0ln"
-path="res://.godot/imported/RareOreC1.png-c3adfeb9dbcf95ab1517ee9394b7ecde.ctex"
+uid="uid://dmpjsiawoskwc"
+path="res://.godot/imported/EpicOreIcon.png-15fca650d529a954d824ddd1274b6395.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objekts/Ores/RareOreC1.png"
-dest_files=["res://.godot/imported/RareOreC1.png-c3adfeb9dbcf95ab1517ee9394b7ecde.ctex"]
+source_file="res://Sprites/Objekts/Ores/EpicOrs/EpicOreIcon.png"
+dest_files=["res://.godot/imported/EpicOreIcon.png-15fca650d529a954d824ddd1274b6395.ctex"]
 
 [params]
 

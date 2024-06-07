@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu3evv3tmsydf"
-path="res://.godot/imported/Erze.png-cb575e66c44c7c09ff632a0268675857.ctex"
+uid="uid://bsbdgd2ye5p53"
+path="res://.godot/imported/RareOreIcon.png-772dd67e933c2622619926db2105af80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objekts/Ores/Erze.png"
-dest_files=["res://.godot/imported/Erze.png-cb575e66c44c7c09ff632a0268675857.ctex"]
+source_file="res://Sprites/Objekts/Ores/RareOrs/RareOreIcon.png"
+dest_files=["res://.godot/imported/RareOreIcon.png-772dd67e933c2622619926db2105af80.ctex"]
 
 [params]
 
