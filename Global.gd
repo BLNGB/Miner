@@ -1,10 +1,10 @@
 extends Node
 
-var CommonOreCount = 1
-var UncommonOreCount = 1
-var RareOreCount = 1
-var EpicOreCount = 1
-var LegendaryOreCount = 1
+var CommonOreCount = 0
+var UncommonOreCount = 0
+var RareOreCount = 0
+var EpicOreCount = 0
+var LegendaryOreCount = 0
 
 var CommonOreChance = 1
 var UncommonOreChance = 1
@@ -15,6 +15,8 @@ var LegendaryOreChance = 1
 var StrengthLvl = 1
 var ValueLvl = 1
 var SpeedLvl = 1
+var HealLvl = 1
+var ResistLvl = 1
 
 var PositionOutside = Vector2(500,500)
 var DisableAttack = false
@@ -28,4 +30,5 @@ var CamLimitRight = 0
 var CamLimitTop = 0
 var CamLimitBottom = 0
 
- 
+var PlayerHp = 100
+var DmgOverTime = 0
