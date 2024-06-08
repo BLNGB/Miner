@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://55koddjtc6jy"]
+[gd_scene load_steps=26 format=3 uid="uid://55koddjtc6jy"]
 
 [ext_resource type="Script" path="res://Nodes/Player/Player.gd" id="1_2ufm4"]
 [ext_resource type="Texture2D" uid="uid://ymuxv1srhd5h" path="res://Sprites/Player/Player/Player Idle.png" id="2_kr2cq"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dnfjea2weyvwt" path="res://Nodes/Player/Pickaxe.tscn" id="4_hx48y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25wpp"]
-size = Vector2(9, 16)
+size = Vector2(9, 6)
 
 [sub_resource type="Animation" id="Animation_ehkcb"]
 resource_name = "Idle"
@@ -193,7 +193,46 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [-5.23599, 1.0472]
+"values": [-4.88692, 1.0472]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pickaxe:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pickaxe:process_mode")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 4]
+}
+
+[sub_resource type="Animation" id="Animation_cpbme"]
+resource_name = "MineCC"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pickaxe:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3.31613, -2.96706]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -259,17 +298,22 @@ tracks/2/keys = {
 "values": [0]
 }
 
+[sub_resource type="Animation" id="Animation_ibf2r"]
+resource_name = "visible"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jqtkw"]
 _data = {
 "Mine": SubResource("Animation_dhqdd"),
-"RESET": SubResource("Animation_5cvqd")
+"MineCC": SubResource("Animation_cpbme"),
+"RESET": SubResource("Animation_5cvqd"),
+"visible": SubResource("Animation_ibf2r")
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_2ufm4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0)
+position = Vector2(0.5, 5)
 shape = SubResource("RectangleShape2D_25wpp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
