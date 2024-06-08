@@ -17,3 +17,8 @@ var ValueLvl = 1
 var SpeedLvl = 1
 
 var PositionOutside = Vector2(500,500)
+var DisableAttack = false
+var HoveredUpgrade = "N"
+var CostST = 1
+var CostV = 1
+var CostSP = 1

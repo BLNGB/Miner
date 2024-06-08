@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c3g3u8e8rn51w"]
+[gd_scene load_steps=16 format=3 uid="uid://c3g3u8e8rn51w"]
 
 [ext_resource type="Script" path="res://Nodes/Ui/UI.gd" id="1_yrinb"]
 [ext_resource type="Texture2D" uid="uid://c82l4xk5yls6o" path="res://Sprites/Objekts/Ores/CommonOrs/CommonOreIcon.png" id="2_0q5d0"]
@@ -9,6 +9,95 @@
 [ext_resource type="Texture2D" uid="uid://b2ao3bw451r4n" path="res://Sprites/Ui/StrenghtButton.png" id="7_sfpix"]
 [ext_resource type="Texture2D" uid="uid://c3b10rxdleswn" path="res://Sprites/Ui/ValueButton.png" id="8_7fmdw"]
 [ext_resource type="Texture2D" uid="uid://ehebr25e4gbn" path="res://Sprites/Ui/SpeedButton.png" id="9_63nlo"]
+[ext_resource type="Texture2D" uid="uid://drykdunyr5gaw" path="res://Sprites/Ui/CostWindow.png" id="10_jpwqj"]
+[ext_resource type="Texture2D" uid="uid://bi8of06821xhc" path="res://Sprites/Ui/Spacer.png" id="11_30h3s"]
+[ext_resource type="Texture2D" uid="uid://db2um30yogu8p" path="res://Sprites/Ui/CostWindowError.png" id="12_glyv3"]
+
+[sub_resource type="Animation" id="Animation_cq1yj"]
+resource_name = "InsufficientFunds"
+length = 0.2
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/CostBox:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("12_glyv3"), ExtResource("10_jpwqj")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/CostBox:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(95, 24), Vector2(99, 28), Vector2(95, 24)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/CostBox:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(1.8, 1.8), Vector2(2, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_kfwvo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/CostBox:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("10_jpwqj")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/CostBox:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(95, 24)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/CostBox:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0ekr6"]
+_data = {
+"InsufficientFunds": SubResource("Animation_cq1yj"),
+"RESET": SubResource("Animation_kfwvo")
+}
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_yrinb")
@@ -147,6 +236,43 @@ offset_bottom = 27.0
 scale = Vector2(0.5, 0.5)
 text = "Lvl"
 
+[node name="CostBox" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(95, 24)
+scale = Vector2(2, 2)
+texture = ExtResource("10_jpwqj")
+
+[node name="Label" type="Label" parent="Control/CostBox"]
+offset_left = -10.0
+offset_top = -14.5
+offset_right = 30.0
+offset_bottom = 8.5
+scale = Vector2(0.5, 0.5)
+text = "Cost"
+
+[node name="Ore" type="Sprite2D" parent="Control/CostBox"]
+position = Vector2(-20, 4)
+texture = ExtResource("11_30h3s")
+
+[node name="Cost" type="Label" parent="Control/CostBox"]
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0ekr6")
+}
+
+[connection signal="mouse_entered" from="Control" to="." method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="Control" to="." method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="Control/Strength" to="." method="_on_strength_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Strength" to="." method="_on_strength_mouse_exited"]
 [connection signal="pressed" from="Control/Strength" to="." method="_on_strength_pressed"]
+[connection signal="mouse_entered" from="Control/Value" to="." method="_on_value_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Value" to="." method="_on_value_mouse_exited"]
 [connection signal="pressed" from="Control/Value" to="." method="_on_value_pressed"]
+[connection signal="mouse_entered" from="Control/Speed" to="." method="_on_speed_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Speed" to="." method="_on_speed_mouse_exited"]
 [connection signal="pressed" from="Control/Speed" to="." method="_on_speed_pressed"]

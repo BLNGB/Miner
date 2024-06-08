@@ -51,7 +51,7 @@ func _ready():
 		CaveStairs.global_position = Vector2(rand_x, rand_y)
 		add_child(CaveStairs)
 
-	for i in range(100*Global.CommonOreChance):
+	for i in range(100*Global.CommonOreChance,1000*Global.CommonOreChance):
 		var CommonOre = preload("res://Nodes/Objekts/Ores/CommonOre.tscn").instantiate()
 
 		rand_x = randf_range(-100,1252)
@@ -59,7 +59,7 @@ func _ready():
 		CommonOre.global_position = Vector2(rand_x, rand_y)
 		add_child(CommonOre)
 
-	for i in range(100*Global.UncommonOreChance):
+	for i in range(100*Global.UncommonOreChance,1000*Global.CommonOreChance):
 		var UncommonOre = preload("res://Nodes/Objekts/Ores/UncommonOre.tscn").instantiate()
 
 		rand_x = randf_range(-100,1252)
@@ -67,7 +67,7 @@ func _ready():
 		UncommonOre.global_position = Vector2(rand_x, rand_y)
 		add_child(UncommonOre)
 
-	for i in range(100*Global.RareOreChance):
+	for i in range(100*Global.RareOreChance,1000*Global.CommonOreChance):
 		var RareOre = preload("res://Nodes/Objekts/Ores/RareOre.tscn").instantiate()
 
 		rand_x = randf_range(-100,1252)
@@ -75,7 +75,7 @@ func _ready():
 		RareOre.global_position = Vector2(rand_x, rand_y)
 		add_child(RareOre)
 
-	for i in range(100*Global.EpicOreChance):
+	for i in range(100*Global.EpicOreChance,1000*Global.CommonOreChance):
 		var EpicOre = preload("res://Nodes/Objekts/Ores/EpicOre.tscn").instantiate()
 
 		rand_x = randf_range(-100,1252)
@@ -83,7 +83,7 @@ func _ready():
 		EpicOre.global_position = Vector2(rand_x, rand_y)
 		add_child(EpicOre)
 
-	for i in range(100*Global.LegendaryOreChance):
+	for i in range(100*Global.LegendaryOreChance,1000*Global.CommonOreChance):
 		var LegendaryOre = preload("res://Nodes/Objekts/Ores/LegendaryOre.tscn").instantiate()
 
 		rand_x = randf_range(-100,1252)
