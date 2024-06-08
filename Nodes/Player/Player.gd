@@ -7,7 +7,7 @@ var directionY
 func _process(delta):
 	var attackSpeed = 1 + (Global.SpeedLvl / 10)
 	$Pick.speed_scale = attackSpeed
-	if Input.is_action_just_pressed("ui_attack") and Global.DisableAttack == false:
+	if Input.is_action_pressed("ui_attack") and Global.DisableAttack == false:
 		$Pick.play("Mine")
 
 
