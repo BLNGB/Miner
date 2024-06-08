@@ -1,5 +1,3 @@
-flip Pickaxe
-Dmg over time effect
 Health regen upgrade
 Armore/ fire res upgrade
 base value scaling (ores)
