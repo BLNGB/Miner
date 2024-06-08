@@ -1,0 +1,320 @@
+[gd_scene load_steps=11 format=3 uid="uid://uvs7k5tevakl"]
+
+[ext_resource type="Script" path="res://Nodes/Ui/CheatMenue.gd" id="1_glu3c"]
+[ext_resource type="Texture2D" uid="uid://c7m3tgu5gul6r" path="res://Sprites/Ui/Cheat  Menue/Open Button.png" id="2_t7x8r"]
+[ext_resource type="Texture2D" uid="uid://b2ao3bw451r4n" path="res://Sprites/Ui/StrenghtButton.png" id="3_tdga7"]
+[ext_resource type="Texture2D" uid="uid://c3b10rxdleswn" path="res://Sprites/Ui/ValueButton.png" id="4_pdjmi"]
+[ext_resource type="Texture2D" uid="uid://ehebr25e4gbn" path="res://Sprites/Ui/SpeedButton.png" id="5_u54c3"]
+[ext_resource type="Texture2D" uid="uid://c82l4xk5yls6o" path="res://Sprites/Objekts/Ores/CommonOrs/CommonOreIcon.png" id="6_btmnc"]
+[ext_resource type="Texture2D" uid="uid://dhb7qei48ppg2" path="res://Sprites/Objekts/Ores/UncommonOrs/UncommonOreIcon.png" id="7_3oel5"]
+[ext_resource type="Texture2D" uid="uid://bsbdgd2ye5p53" path="res://Sprites/Objekts/Ores/RareOrs/RareOreIcon.png" id="8_1rgj7"]
+[ext_resource type="Texture2D" uid="uid://d0larhe6ol587" path="res://Sprites/Objekts/Ores/EpicOrs/EpicOreIcon.png" id="9_7nv7r"]
+[ext_resource type="Texture2D" uid="uid://dkflrxq8v6ify" path="res://Sprites/Objekts/Ores/LegendaryOrs/LegendaryOreIcon.png" id="10_l3wfu"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_glu3c")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Auklapp" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 1104.0
+offset_top = 32.0
+offset_right = 1120.0
+offset_bottom = 48.0
+texture_normal = ExtResource("2_t7x8r")
+
+[node name="Einklapp" type="TextureButton" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 1120.0
+offset_top = 352.0
+offset_right = 1136.0
+offset_bottom = 368.0
+rotation = 3.14159
+texture_normal = ExtResource("2_t7x8r")
+
+[node name="Control2" type="Control" parent="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 576.0
+offset_right = 1152.0
+offset_bottom = 384.0
+metadata/_edit_lock_ = true
+
+[node name="Str" type="Sprite2D" parent="Control/Control2"]
+position = Vector2(80, 48)
+scale = Vector2(2, 2)
+texture = ExtResource("3_tdga7")
+
+[node name="Str Add 100" type="Button" parent="Control/Control2/Str"]
+offset_left = 92.0
+offset_top = -8.0
+offset_right = 163.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 100"
+
+[node name="Str Add 10" type="Button" parent="Control/Control2/Str"]
+offset_left = 56.0
+offset_top = -8.0
+offset_right = 117.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 10"
+
+[node name="Str Add 1" type="Button" parent="Control/Control2/Str"]
+offset_left = 24.0
+offset_top = -8.0
+offset_right = 76.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 1"
+
+[node name="Val" type="Sprite2D" parent="Control/Control2"]
+position = Vector2(80, 96)
+scale = Vector2(2, 2)
+texture = ExtResource("4_pdjmi")
+
+[node name="Val Add 100" type="Button" parent="Control/Control2/Val"]
+offset_left = 92.0
+offset_top = -8.0
+offset_right = 163.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 100"
+
+[node name="Val Add 10" type="Button" parent="Control/Control2/Val"]
+offset_left = 56.0
+offset_top = -8.0
+offset_right = 117.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 10"
+
+[node name="Val Add 1" type="Button" parent="Control/Control2/Val"]
+offset_left = 24.0
+offset_top = -8.0
+offset_right = 76.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 1"
+
+[node name="Spe" type="Sprite2D" parent="Control/Control2"]
+position = Vector2(80, 144)
+scale = Vector2(2, 2)
+texture = ExtResource("5_u54c3")
+
+[node name="Spe Add 100" type="Button" parent="Control/Control2/Spe"]
+offset_left = 92.0
+offset_top = -8.0
+offset_right = 163.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 100"
+
+[node name="Spe Add 10" type="Button" parent="Control/Control2/Spe"]
+offset_left = 56.0
+offset_top = -8.0
+offset_right = 117.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 10"
+
+[node name="Spe Add 1" type="Button" parent="Control/Control2/Spe"]
+offset_left = 24.0
+offset_top = -8.0
+offset_right = 76.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 1"
+
+[node name="ComOre" type="Sprite2D" parent="Control/Control2"]
+position = Vector2(80, 208)
+scale = Vector2(2, 2)
+texture = ExtResource("6_btmnc")
+
+[node name="Com Add 100" type="Button" parent="Control/Control2/ComOre"]
+offset_left = 92.0
+offset_top = -8.0
+offset_right = 163.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 100"
+metadata/_edit_use_anchors_ = true
+
+[node name="Com Add 10" type="Button" parent="Control/Control2/ComOre"]
+offset_left = 56.0
+offset_top = -8.0
+offset_right = 117.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 10"
+metadata/_edit_use_anchors_ = true
+
+[node name="Com Add 1" type="Button" parent="Control/Control2/ComOre"]
+offset_left = 24.0
+offset_top = -8.0
+offset_right = 76.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 1"
+metadata/_edit_use_anchors_ = true
+
+[node name="UncOre" type="Sprite2D" parent="Control/Control2"]
+position = Vector2(80, 248)
+scale = Vector2(2, 2)
+texture = ExtResource("7_3oel5")
+
+[node name="Unc Add 100" type="Button" parent="Control/Control2/UncOre"]
+offset_left = 92.0
+offset_top = -8.0
+offset_right = 163.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 100"
+metadata/_edit_use_anchors_ = true
+
+[node name="Unc Add 10" type="Button" parent="Control/Control2/UncOre"]
+offset_left = 56.0
+offset_top = -8.0
+offset_right = 117.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 10"
+metadata/_edit_use_anchors_ = true
+
+[node name="Unc Add 1" type="Button" parent="Control/Control2/UncOre"]
+offset_left = 24.0
+offset_top = -8.0
+offset_right = 76.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 1"
+metadata/_edit_use_anchors_ = true
+
+[node name="RarOre" type="Sprite2D" parent="Control/Control2"]
+position = Vector2(80, 288)
+scale = Vector2(2, 2)
+texture = ExtResource("8_1rgj7")
+
+[node name="Rar Add 100" type="Button" parent="Control/Control2/RarOre"]
+offset_left = 92.0
+offset_top = -8.0
+offset_right = 163.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 100"
+metadata/_edit_use_anchors_ = true
+
+[node name="Rar Add 10" type="Button" parent="Control/Control2/RarOre"]
+offset_left = 56.0
+offset_top = -8.0
+offset_right = 117.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 10"
+metadata/_edit_use_anchors_ = true
+
+[node name="Rar Add 1" type="Button" parent="Control/Control2/RarOre"]
+offset_left = 24.0
+offset_top = -8.0
+offset_right = 76.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 1"
+metadata/_edit_use_anchors_ = true
+
+[node name="EpiOre" type="Sprite2D" parent="Control/Control2"]
+position = Vector2(80, 328)
+scale = Vector2(2, 2)
+texture = ExtResource("9_7nv7r")
+
+[node name="Epi Add 100" type="Button" parent="Control/Control2/EpiOre"]
+offset_left = 92.0
+offset_top = -8.0
+offset_right = 163.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 100"
+metadata/_edit_use_anchors_ = true
+
+[node name="Epi Add 10" type="Button" parent="Control/Control2/EpiOre"]
+offset_left = 56.0
+offset_top = -8.0
+offset_right = 117.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 10"
+metadata/_edit_use_anchors_ = true
+
+[node name="Epi Add 1" type="Button" parent="Control/Control2/EpiOre"]
+offset_left = 24.0
+offset_top = -8.0
+offset_right = 76.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 1"
+metadata/_edit_use_anchors_ = true
+
+[node name="LegOre" type="Sprite2D" parent="Control/Control2"]
+position = Vector2(80, 368)
+scale = Vector2(2, 2)
+texture = ExtResource("10_l3wfu")
+
+[node name="Leg Add 100" type="Button" parent="Control/Control2/LegOre"]
+offset_left = 92.0
+offset_top = -8.0
+offset_right = 163.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 100"
+
+[node name="Leg Add 10" type="Button" parent="Control/Control2/LegOre"]
+offset_left = 56.0
+offset_top = -8.0
+offset_right = 117.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 10"
+
+[node name="Leg Add 1" type="Button" parent="Control/Control2/LegOre"]
+offset_left = 24.0
+offset_top = -8.0
+offset_right = 76.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Add 1"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Control/Auklapp" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Control/Einklapp" to="." method="_on_einklapp_pressed"]
+[connection signal="pressed" from="Control/Control2/Str/Str Add 100" to="." method="_on_str_add_100_pressed"]
+[connection signal="pressed" from="Control/Control2/Str/Str Add 10" to="." method="_on_str_add_10_pressed"]
+[connection signal="pressed" from="Control/Control2/Str/Str Add 1" to="." method="_on_str_add_1_pressed"]
+[connection signal="pressed" from="Control/Control2/Val/Val Add 100" to="." method="_on_val_add_100_pressed"]
+[connection signal="pressed" from="Control/Control2/Val/Val Add 10" to="." method="_on_val_add_10_pressed"]
+[connection signal="pressed" from="Control/Control2/Val/Val Add 1" to="." method="_on_val_add_1_pressed"]
+[connection signal="pressed" from="Control/Control2/Spe/Spe Add 100" to="." method="_on_spe_add_100_pressed"]
+[connection signal="pressed" from="Control/Control2/Spe/Spe Add 10" to="." method="_on_spe_add_10_pressed"]
+[connection signal="pressed" from="Control/Control2/Spe/Spe Add 1" to="." method="_on_spe_add_1_pressed"]
+[connection signal="pressed" from="Control/Control2/ComOre/Com Add 100" to="." method="_on_com_add_100_pressed"]
+[connection signal="pressed" from="Control/Control2/ComOre/Com Add 10" to="." method="_on_com_add_10_pressed"]
+[connection signal="pressed" from="Control/Control2/ComOre/Com Add 1" to="." method="_on_com_add_1_pressed"]
+[connection signal="pressed" from="Control/Control2/UncOre/Unc Add 100" to="." method="_on_unc_add_100_pressed"]
+[connection signal="pressed" from="Control/Control2/UncOre/Unc Add 10" to="." method="_on_unc_add_10_pressed"]
+[connection signal="pressed" from="Control/Control2/UncOre/Unc Add 1" to="." method="_on_unc_add_1_pressed"]
+[connection signal="pressed" from="Control/Control2/RarOre/Rar Add 100" to="." method="_on_rar_add_100_pressed"]
+[connection signal="pressed" from="Control/Control2/RarOre/Rar Add 10" to="." method="_on_rar_add_10_pressed"]
+[connection signal="pressed" from="Control/Control2/RarOre/Rar Add 1" to="." method="_on_rar_add_1_pressed"]
+[connection signal="pressed" from="Control/Control2/EpiOre/Epi Add 100" to="." method="_on_epi_add_100_pressed"]
+[connection signal="pressed" from="Control/Control2/EpiOre/Epi Add 10" to="." method="_on_epi_add_10_pressed"]
+[connection signal="pressed" from="Control/Control2/EpiOre/Epi Add 1" to="." method="_on_epi_add_1_pressed"]
+[connection signal="pressed" from="Control/Control2/LegOre/Leg Add 100" to="." method="_on_leg_add_100_pressed"]
+[connection signal="pressed" from="Control/Control2/LegOre/Leg Add 10" to="." method="_on_leg_add_10_pressed"]
+[connection signal="pressed" from="Control/Control2/LegOre/Leg Add 1" to="." method="_on_leg_add_1_pressed"]

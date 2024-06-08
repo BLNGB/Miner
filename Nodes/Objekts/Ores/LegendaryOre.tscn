@@ -9,9 +9,9 @@
 [node name="LegendaryOre" type="StaticBody2D"]
 script = ExtResource("2_3f8pw")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="HurtBox" type="Area2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HurtBox"]
 polygon = PackedVector2Array(-5, -2, -3, -2, -3, -1, 0, -1, 0, -2, 3, -2, 3, 0, 4, 0, 4, 1, 5, 1, 5, 4, 4, 4, 4, 5, -5, 5, -5, 2, -4, 2, -4, 0, -5, 0)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
@@ -45,8 +45,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "100"
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
+[connection signal="mouse_entered" from="HurtBox" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="HurtBox" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="tree_entered" from="LegendaryOre" to="." method="_on_legendary_ore_tree_entered"]
