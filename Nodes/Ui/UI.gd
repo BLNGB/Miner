@@ -10,6 +10,10 @@ func _process(delta):
 	$Control/Strength/StrengthL.text = "Lvl " + str(Global.StrengthLvl)
 	$Control/Value/ValueL.text = "Lvl " + str(Global.ValueLvl)
 	$Control/Speed/SpeedL.text = "Lvl " + str(Global.SpeedLvl)
+	
+	$PlayerHP.value = Global.PlayerHp
+	if Global.PlayerHp == 0:
+		get_tree().change_scene_to_file("res://Nodes/Areas/outside.tscn")
 
 
 
