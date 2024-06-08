@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b65jl10fhmhtv"]
 
-[ext_resource type="Texture2D" uid="uid://crtm811rfjxvj" path="res://Sprites/Objekts/Ores/RareOrs/RareOreC1.png" id="1_7nqra"]
+[ext_resource type="Texture2D" uid="uid://crtm811rfjxvj" path="res://Sprites/Objekts/Ores/RareOrs/RareOreC2.png" id="1_7nqra"]
 [ext_resource type="Script" path="res://Nodes/Objekts/Ores/RareOre.gd" id="2_n4tyh"]
 [ext_resource type="Texture2D" uid="uid://n3aiiew8uxi7" path="res://Sprites/Ui/HP Bars/C1BarBottom.png" id="3_kms8p"]
 [ext_resource type="Texture2D" uid="uid://k8jewb22sn6t" path="res://Sprites/Ui/HP Bars/C1BarTop.png" id="4_dbtlj"]
@@ -22,11 +22,11 @@ texture = ExtResource("1_7nqra")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 visible = false
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 24.0
-offset_bottom = 8.0
-scale = Vector2(0.5, 0.5)
+offset_left = -9.5
+offset_top = -7.0
+offset_right = 374.5
+offset_bottom = 89.0
+scale = Vector2(0.05, 0.05)
 value = 100.0
 fill_mode = 1
 texture_under = ExtResource("3_kms8p")
