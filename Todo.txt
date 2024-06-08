@@ -4,3 +4,8 @@ Health regen upgrade
 Armore/ fire res upgrade
 base value scaling (ores)
 base HP scaling (ores)
+schwarzblende
+
+
+optional
+bessere animation 

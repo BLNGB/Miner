@@ -4,23 +4,34 @@ const SPEED = 150.0
 var directionX
 var directionY
 
+@onready var caLimitLeft = Global.CamLimitLeft
+@onready var caLimitRight = Global.CamLimitRight
+@onready var caLimitTop = Global.CamLimitTop
+@onready var caLimitBottom = Global.CamLimitBottom
+
 func _process(delta):
 	var attackSpeed = 1 + (Global.SpeedLvl / 10)
 	$Pick.speed_scale = attackSpeed
 	if Input.is_action_pressed("ui_attack") and Global.DisableAttack == false:
-		$Pick.play("Mine")
+		if get_node("AnimatedSprite2D").flip_h == true:
+			$Pick.play("MineCC")
+		elif get_node("AnimatedSprite2D").flip_h == false:
+			$Pick.play("Mine")
 
 
 func _ready():
+	
+
+	
 	$Pickaxe.visible = false
 	$Pickaxe.process_mode = Node.PROCESS_MODE_DISABLED
 	position = Global.PositionOutside
 	var tilemap_rect = get_parent().get_node("Ground").get_node("TileMap").get_used_rect()
 	var tilemap_cell_size = get_parent().get_node("Ground").get_node("TileMap").tile_set.tile_size 
-	$Camera2D.limit_left = (tilemap_rect.position.x * tilemap_cell_size.x) -100
-	$Camera2D.limit_right = (tilemap_rect.end.x * tilemap_cell_size.x) +100
-	$Camera2D.limit_top = (tilemap_rect.position.y * tilemap_cell_size.y) -100
-	$Camera2D.limit_bottom = (tilemap_rect.end.y * tilemap_cell_size.y) +100
+	$Camera2D.limit_left = (tilemap_rect.position.x * tilemap_cell_size.x) +caLimitLeft
+	$Camera2D.limit_right = (tilemap_rect.end.x * tilemap_cell_size.x) +caLimitRight
+	$Camera2D.limit_top = (tilemap_rect.position.y * tilemap_cell_size.y) +caLimitTop
+	$Camera2D.limit_bottom = (tilemap_rect.end.y * tilemap_cell_size.y) +caLimitBottom
 	anim.play("Idle")
 	
 func _physics_process(delta):
