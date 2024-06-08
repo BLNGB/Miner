@@ -112,7 +112,7 @@ func _ready():
 	print("UncommonOre "+str(uncommonOreCount))
 	print("RareOre "+str(rareOreCount))
 	print("EpicOre "+str(epicOreCount))
-	print("LegendaryOre "+str(legendaryOreCount+"\n"))
+	print("LegendaryOre "+str(legendaryOreCount))
 		
 func randNum(minX,maxX,minY,maxY):
 	rand_x = randf_range(minX,maxX)
