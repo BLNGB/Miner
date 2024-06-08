@@ -14,17 +14,16 @@ var directionY
 func _process(delta):
 	var attackSpeed = 1 + (Global.SpeedLvl / 10)
 	$Pick.speed_scale = attackSpeed
-	
 	if Input.is_action_pressed("ui_attack") and Global.DisableAttack == false:
 		if get_node("AnimatedSprite2D").flip_h == true:
 			$Pick.play("MineCC")
 			
 		elif get_node("AnimatedSprite2D").flip_h == false:
 			$Pick.play("Mine")
-			
+	else:
+		$Pick.play("Idle")
 
 func _ready():
-	$Pickaxe.visible = false
 	$Pickaxe.process_mode = Node.PROCESS_MODE_DISABLED
 	position = Global.PositionOutside
 	var tilemap_rect = get_parent().get_node("Ground").get_node("TileMap").get_used_rect()
@@ -34,6 +33,7 @@ func _ready():
 	$Camera2D.limit_top = (tilemap_rect.position.y * tilemap_cell_size.y) +caLimitTop
 	$Camera2D.limit_bottom = (tilemap_rect.end.y * tilemap_cell_size.y) +caLimitBottom
 	anim.play("Idle")
+	$Pick.play("Idle")
 	Global.PlayerHp = 100
 	
 func _physics_process(delta):
@@ -41,9 +41,11 @@ func _physics_process(delta):
 	velocity.x = directionX * SPEED
 	if directionX == -1:
 		get_node("AnimatedSprite2D").flip_h = true
+		$Pickaxe.set_rotation_degrees(0)
 		anim.play("Walk")
 	elif directionX == 1:
 		get_node("AnimatedSprite2D").flip_h = false
+		$Pickaxe.set_rotation_degrees(-90)
 		anim.play("Walk")
 	elif velocity.y == 0:
 		anim.play("Idle")
@@ -61,3 +63,9 @@ func _physics_process(delta):
 func _on_timer_timeout():
 	Global.PlayerHp -= Global.DmgOverTime
 	$Timer.start()
+
+
+func _on_child_entered_tree(node):
+	
+	if get_tree().current_scene.name.contains("Cave"):
+		$PointLight2D.visible= true
