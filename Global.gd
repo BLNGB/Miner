@@ -22,3 +22,10 @@ var HoveredUpgrade = "N"
 var CostST = 1
 var CostV = 1
 var CostSP = 1
+
+var CamLimitLeft = 0
+var CamLimitRight = 0
+var CamLimitTop = 0
+var CamLimitBottom = 0
+
+ 

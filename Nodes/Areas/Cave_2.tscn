@@ -23,8 +23,8 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-1, 0, 0, 2687048, 0, 0)
 script = ExtResource("1_bjjuf")
 
+[node name="oreGen" parent="." instance=ExtResource("3_m8xf5")]
+
 [node name="Player" parent="." instance=ExtResource("1_tk6ep")]
 
 [node name="UI" parent="." instance=ExtResource("2_luuyb")]
-
-[node name="oreGen" parent="." instance=ExtResource("3_m8xf5")]
