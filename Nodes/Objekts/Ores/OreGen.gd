@@ -54,10 +54,10 @@ func _ready():
 	var legendaryOreCount = 0
 	
 	var commonOre = randi_range(Global.CommonOreChance*100,Global.CommonOreChance*5000)
-	var uncommonOre = randi_range(Global.UncommonOreChance*100,Global.UncommonOreChance*5000)
-	var rareOre = randi_range(Global.RareOreChance*100,Global.RareOreChance*5000)
-	var epicOre = randi_range(Global.EpicOreChance*100,Global.EpicOreChance*5000)
-	var legendaryOre = randi_range(Global.LegendaryOreChance*100,Global.LegendaryOreChance*5000)
+	var uncommonOre = randi_range(Global.UncommonOreChance*90,Global.UncommonOreChance*5000)
+	var rareOre = randi_range(Global.RareOreChance*80,Global.RareOreChance*5000)
+	var epicOre = randi_range(Global.EpicOreChance*70,Global.EpicOreChance*5000)
+	var legendaryOre = randi_range(Global.LegendaryOreChance*60,Global.LegendaryOreChance*5000)
 	
 
 	for i in range(1000):

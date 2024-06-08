@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://dlyarotj7blnw" path="res://Sprites/Objekts/Ores/EpicOrs/EpicOreC1.png" id="1_b0ful"]
 [ext_resource type="Script" path="res://Nodes/Objekts/Ores/EpicOre.gd" id="1_upwjb"]
-[ext_resource type="Texture2D" uid="uid://bm2p4u6tg8bab" path="res://Sprites/Objekts/Ores/HPBarBottom.png" id="3_wp6rj"]
-[ext_resource type="Texture2D" uid="uid://bqckq4fquf3ks" path="res://Sprites/Objekts/Ores/HPBarTop.png" id="4_0r58v"]
-[ext_resource type="Texture2D" uid="uid://dci1g67squfyb" path="res://Sprites/Objekts/Ores/HPBarBar.png" id="5_7g176"]
+[ext_resource type="Texture2D" uid="uid://n3aiiew8uxi7" path="res://Sprites/Ui/HP Bars/C1BarBottom.png" id="3_noexa"]
+[ext_resource type="Texture2D" uid="uid://k8jewb22sn6t" path="res://Sprites/Ui/HP Bars/C1BarTop.png" id="4_2uk3r"]
+[ext_resource type="Texture2D" uid="uid://ci1q2rudb4tn" path="res://Sprites/Ui/HP Bars/C1Bar.png" id="5_pa4f0"]
 
 [node name="EpicOre" type="StaticBody2D"]
 script = ExtResource("1_upwjb")
@@ -30,9 +30,9 @@ scale = Vector2(0.5, 0.5)
 max_value = 500.0
 value = 500.0
 fill_mode = 1
-texture_under = ExtResource("3_wp6rj")
-texture_over = ExtResource("4_0r58v")
-texture_progress = ExtResource("5_7g176")
+texture_under = ExtResource("3_noexa")
+texture_over = ExtResource("4_2uk3r")
+texture_progress = ExtResource("5_pa4f0")
 
 [node name="Label" type="Label" parent="TextureProgressBar"]
 layout_mode = 0
