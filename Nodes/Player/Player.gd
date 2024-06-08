@@ -14,11 +14,14 @@ var directionY
 func _process(delta):
 	var attackSpeed = 1 + (Global.SpeedLvl / 10)
 	$Pick.speed_scale = attackSpeed
+	
 	if Input.is_action_pressed("ui_attack") and Global.DisableAttack == false:
 		if get_node("AnimatedSprite2D").flip_h == true:
 			$Pick.play("MineCC")
+			
 		elif get_node("AnimatedSprite2D").flip_h == false:
 			$Pick.play("Mine")
+			
 
 func _ready():
 	$Pickaxe.visible = false
@@ -44,7 +47,6 @@ func _physics_process(delta):
 		anim.play("Walk")
 	elif velocity.y == 0:
 		anim.play("Idle")
-		
 	directionY = Input.get_axis("ui_up", "ui_down")
 	velocity.y = directionY * SPEED
 	if directionY == -1:

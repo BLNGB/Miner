@@ -1,9 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://55koddjtc6jy"]
+[gd_scene load_steps=27 format=3 uid="uid://55koddjtc6jy"]
 
 [ext_resource type="Script" path="res://Nodes/Player/Player.gd" id="1_2ufm4"]
 [ext_resource type="Texture2D" uid="uid://ymuxv1srhd5h" path="res://Sprites/Player/Player/Player Idle.png" id="2_kr2cq"]
 [ext_resource type="Texture2D" uid="uid://d8nfnr5loqsa" path="res://Sprites/Player/Player/PlayerWalk.png" id="3_po2ra"]
 [ext_resource type="PackedScene" uid="uid://dnfjea2weyvwt" path="res://Nodes/Player/Pickaxe.tscn" id="4_hx48y"]
+[ext_resource type="Texture2D" uid="uid://bd3c7grq3eqk8" path="res://Nodes/Player/Licht_test.png" id="5_icovy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25wpp"]
 size = Vector2(9, 6)
@@ -346,5 +347,9 @@ rotation = -6.28319
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_icovy")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
