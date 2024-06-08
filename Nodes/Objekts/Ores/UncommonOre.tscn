@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://l5xrbcwgvrg7"]
 
-[ext_resource type="Texture2D" uid="uid://c6u8k54d56o6s" path="res://Sprites/Objekts/Ores/UncommonOrs/UncommonOreC1.png" id="1_7pqju"]
+[ext_resource type="Texture2D" uid="uid://c6u8k54d56o6s" path="res://Sprites/Objekts/Ores/UncommonOrs/UncommonOreC2.png" id="1_7pqju"]
 [ext_resource type="Script" path="res://Nodes/Objekts/Ores/UncommonOre.gd" id="2_ttmth"]
 [ext_resource type="Texture2D" uid="uid://bm2p4u6tg8bab" path="res://Sprites/Objekts/Ores/HPBarBottom.png" id="3_4xkee"]
 [ext_resource type="Texture2D" uid="uid://bqckq4fquf3ks" path="res://Sprites/Objekts/Ores/HPBarTop.png" id="4_pkq6j"]
@@ -17,13 +17,16 @@ polygon = PackedVector2Array(-5, 1, -5, -2, -2, -2, -2, -1, 0, -1, 0, -2, 2, -2,
 [node name="UncommonOre" type="Sprite2D" parent="."]
 texture = ExtResource("1_7pqju")
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-5, -2, -5, 5, 3, 5, 5, 3, 5, 0, 4, 0, 2, -2)
+
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 visible = false
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 24.0
-offset_bottom = 8.0
-scale = Vector2(0.5, 0.5)
+offset_left = -9.5
+offset_top = -7.0
+offset_right = 374.5
+offset_bottom = 89.0
+scale = Vector2(0.05, 0.05)
 max_value = 50.0
 value = 50.0
 fill_mode = 1
@@ -41,9 +44,6 @@ scale = Vector2(0.2, 0.2)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "100"
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-5, -2, -5, 5, 3, 5, 5, 3, 5, 0, 4, 0, 2, -2)
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="mouse_entered" from="Hurtbox" to="." method="_on_area_2d_mouse_entered"]

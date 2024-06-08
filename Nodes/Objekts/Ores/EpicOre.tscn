@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dcw22ocal33q6"]
 
-[ext_resource type="Texture2D" uid="uid://dlyarotj7blnw" path="res://Sprites/Objekts/Ores/EpicOrs/EpicOreC1.png" id="1_b0ful"]
+[ext_resource type="Texture2D" uid="uid://dlyarotj7blnw" path="res://Sprites/Objekts/Ores/EpicOrs/EpicOreC2.png" id="1_b0ful"]
 [ext_resource type="Script" path="res://Nodes/Objekts/Ores/EpicOre.gd" id="1_upwjb"]
 [ext_resource type="Texture2D" uid="uid://bm2p4u6tg8bab" path="res://Sprites/Objekts/Ores/HPBarBottom.png" id="3_wp6rj"]
 [ext_resource type="Texture2D" uid="uid://bqckq4fquf3ks" path="res://Sprites/Objekts/Ores/HPBarTop.png" id="4_0r58v"]
@@ -22,11 +22,11 @@ texture = ExtResource("1_b0ful")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 visible = false
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 24.0
-offset_bottom = 8.0
-scale = Vector2(0.5, 0.5)
+offset_left = -9.5
+offset_top = -7.0
+offset_right = 374.5
+offset_bottom = 89.0
+scale = Vector2(0.05, 0.05)
 max_value = 500.0
 value = 500.0
 fill_mode = 1
