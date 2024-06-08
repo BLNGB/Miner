@@ -4,14 +4,16 @@ const SPEED = 150.0
 var directionX
 var directionY
 
-
 func _process(delta):
-	$Pick.speed_scale = 1 + (Global.SpeedLvl / 100)
-	if Input.is_action_just_pressed("ui_attack"):
+	var attackSpeed = 1 + (Global.SpeedLvl / 10)
+	$Pick.speed_scale = attackSpeed
+	if Input.is_action_just_pressed("ui_attack") and Global.DisableAttack == false:
 		$Pick.play("Mine")
 
 
 func _ready():
+	$Pickaxe.visible = false
+	$Pickaxe.process_mode = Node.PROCESS_MODE_DISABLED
 	position = Global.PositionOutside
 	var tilemap_rect = get_parent().get_node("Ground").get_node("TileMap").get_used_rect()
 	var tilemap_cell_size = get_parent().get_node("Ground").get_node("TileMap").tile_set.tile_size 
