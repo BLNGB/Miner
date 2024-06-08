@@ -9,6 +9,8 @@ var directionY
 @onready var caLimitTop = Global.CamLimitTop
 @onready var caLimitBottom = Global.CamLimitBottom
 
+
+
 func _process(delta):
 	var attackSpeed = 1 + (Global.SpeedLvl / 10)
 	$Pick.speed_scale = attackSpeed
@@ -18,11 +20,7 @@ func _process(delta):
 		elif get_node("AnimatedSprite2D").flip_h == false:
 			$Pick.play("Mine")
 
-
 func _ready():
-	
-
-	
 	$Pickaxe.visible = false
 	$Pickaxe.process_mode = Node.PROCESS_MODE_DISABLED
 	position = Global.PositionOutside
@@ -33,6 +31,7 @@ func _ready():
 	$Camera2D.limit_top = (tilemap_rect.position.y * tilemap_cell_size.y) +caLimitTop
 	$Camera2D.limit_bottom = (tilemap_rect.end.y * tilemap_cell_size.y) +caLimitBottom
 	anim.play("Idle")
+	Global.PlayerHp = 100
 	
 func _physics_process(delta):
 	directionX = Input.get_axis("ui_left", "ui_right")
@@ -55,3 +54,8 @@ func _physics_process(delta):
 	elif velocity.x == 0:
 		anim.play("Idle")
 	move_and_slide()
+
+
+func _on_timer_timeout():
+	Global.PlayerHp -= Global.DmgOverTime
+	$Timer.start()

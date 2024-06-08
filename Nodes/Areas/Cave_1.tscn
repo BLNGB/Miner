@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://drku52586jxrr"]
+[gd_scene load_steps=9 format=3 uid="uid://drku52586jxrr"]
 
+[ext_resource type="Script" path="res://Nodes/Areas/Cave_1.gd" id="1_yx63v"]
 [ext_resource type="Texture2D" uid="uid://b6njrxu6byue4" path="res://Sprites/Ground/InCaves/Cave boden 1.png" id="2_cbw5b"]
 [ext_resource type="Script" path="res://Nodes/Ground/CaveGroundGen.gd" id="2_nhcn0"]
 [ext_resource type="PackedScene" uid="uid://55koddjtc6jy" path="res://Nodes/Player/Player.tscn" id="2_s16ha"]
@@ -14,6 +15,7 @@ texture = ExtResource("2_cbw5b")
 sources/0 = SubResource("TileSetAtlasSource_3d7jh")
 
 [node name="Cave1" type="Node2D"]
+script = ExtResource("1_yx63v")
 
 [node name="Ground" type="Node2D" parent="."]
 
