@@ -4,25 +4,34 @@ const SPEED = 150.0
 var directionX
 var directionY
 
+var active = false
+
 @onready var caLimitLeft = Global.CamLimitLeft
 @onready var caLimitRight = Global.CamLimitRight
 @onready var caLimitTop = Global.CamLimitTop
 @onready var caLimitBottom = Global.CamLimitBottom
 
 func _process(delta):
-	var attackSpeed = 1 + (Global.SpeedLvl / 10)
-	if Input.is_action_pressed("ui_attack") and Global.DisableAttack == false:
-		get_node("Pickaxe/Pickaxe/CollisionPolygon2D").disabled = false 
-		if get_node("AnimatedSprite2D").flip_h == true:
+	var attackSpeed = 1 + (Global.SpeedLvl/10)
+	
+	if Input.is_action_pressed("ui_attack") and Global.DisableAttack == false: 
+		
+		if active == false:
+			if get_node("AnimatedSprite2D").flip_h == true:
+				get_node("Pickaxe/Pickaxe/CollisionPolygon2D").disabled = false
+				$Pick.play("MineCC",-1,attackSpeed)
+				Global.DisableAttack == true
 			
-			$Pick.play("MineCC",-1,1+attackSpeed)
+			elif get_node("AnimatedSprite2D").flip_h == false:
+				get_node("Pickaxe/Pickaxe/CollisionPolygon2D").disabled = false
+				$Pick.play("Mine",-1,attackSpeed)
+				Global.DisableAttack == true
 			
-		elif get_node("AnimatedSprite2D").flip_h == false:
-			$Pick.play("Mine",-1,1+attackSpeed)
 			
-	else:
-		get_node("Pickaxe/Pickaxe/CollisionPolygon2D").disabled = true
-		$Pick.play("Idle")
+	if $Pick.is_playing() == false:
+				get_node("Pickaxe/Pickaxe/CollisionPolygon2D").disabled = true
+				$Pick.play("Idle")
+
 		
 
 func _ready():
@@ -35,7 +44,9 @@ func _ready():
 	$Camera2D.limit_top = (tilemap_rect.position.y * tilemap_cell_size.y) +caLimitTop
 	$Camera2D.limit_bottom = (tilemap_rect.end.y * tilemap_cell_size.y) +caLimitBottom
 	
+	get_node("Pickaxe/Pickaxe/CollisionPolygon2D").disabled = true
 	$Pickaxe.set_rotation_degrees(-90)
+	
 	anim.play("Idle")
 	$Pick.play("Idle")
 	Global.PlayerHp = 100
@@ -76,3 +87,9 @@ func _on_child_entered_tree(node):
 	
 	if get_tree().current_scene.name.contains("Cave"):
 		$PointLight2D.visible= true
+
+
+func _on_pick_animation_finished(anim_name):
+	if anim_name == "Mine" || anim_name=="MineCC":
+		Global.DisableAttack == false
+		active = false
