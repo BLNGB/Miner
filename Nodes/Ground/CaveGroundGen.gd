@@ -1,10 +1,10 @@
 extends TileMap
 
 var minX = -1
-var maxX = 1252/2
+var maxX = 1252/15.6
 
 var minY = -1
-var maxY =  750/2
+var maxY =  750/15.6
 
 func _ready():
 	var scene = get_tree().current_scene.name

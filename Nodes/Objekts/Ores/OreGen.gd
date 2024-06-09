@@ -9,58 +9,62 @@ var maxX = 1252
 var minY = -2
 var maxY = 750
 
-func _ready():
+var maxOre= 500
+
+func _ready(): 
 	randomize()
 	
 	if get_parent().name == "Cave1":
-		Global.CommonOreChance = 0.07
-		Global.UncommonOreChance = 0.04
-		Global.RareOreChance = 0.03
-		Global.EpicOreChance = 0.02
-		Global.LegendaryOreChance = 0.01
+		Global.CommonOreChance = 0.5
+		Global.UncommonOreChance = 0.2
+		Global.RareOreChance = 0.15
+		Global.EpicOreChance = 0.1
+		Global.LegendaryOreChance = 0.05
 		
 	if get_parent().name == "Cave2":
-		Global.CommonOreChance = 0.05
-		Global.UncommonOreChance = 0.06
-		Global.RareOreChance = 0.07
-		Global.EpicOreChance = 0.08
-		Global.LegendaryOreChance = 0.09
+		Global.CommonOreChance = 0.5
+		Global.UncommonOreChance = 0.2
+		Global.RareOreChance = 0.15
+		Global.EpicOreChance = 0.1
+		Global.LegendaryOreChance = 0.05
 		
 	if get_parent().name == "Cave3":
 		Global.CommonOreChance = 0.5
-		Global.UncommonOreChance = 0.25
-		Global.RareOreChance = 0.12
-		Global.EpicOreChance = 0.6
-		Global.LegendaryOreChance = 0.3
+		Global.UncommonOreChance = 0.2
+		Global.RareOreChance = 0.15
+		Global.EpicOreChance = 0.1
+		Global.LegendaryOreChance = 0.05
 		
 	if get_parent().name == "Cave4":
 		Global.CommonOreChance = 0.5
-		Global.UncommonOreChance = 0.25
-		Global.RareOreChance = 0.12
-		Global.EpicOreChance = 0.6
-		Global.LegendaryOreChance = 0.3
+		Global.UncommonOreChance = 0.2
+		Global.RareOreChance = 0.15
+		Global.EpicOreChance = 0.1
+		Global.LegendaryOreChance = 0.05
 	
 	if get_parent().name == "Cave5":
 		Global.CommonOreChance = 0.5
-		Global.UncommonOreChance = 0.25
-		Global.RareOreChance = 0.12
-		Global.EpicOreChance = 0.6
-		Global.LegendaryOreChance = 0.3
+		Global.UncommonOreChance = 0.2
+		Global.RareOreChance = 0.15
+		Global.EpicOreChance = 0.1
+		Global.LegendaryOreChance = 0.05
 	
 	var commonOreCount = 0
 	var uncommonOreCount = 0
 	var rareOreCount = 0
 	var epicOreCount = 0
 	var legendaryOreCount = 0
-	
-	var commonOre = randi_range(Global.CommonOreChance*100,Global.CommonOreChance*5000)
-	var uncommonOre = randi_range(Global.UncommonOreChance*90,Global.UncommonOreChance*5000)
-	var rareOre = randi_range(Global.RareOreChance*80,Global.RareOreChance*5000)
-	var epicOre = randi_range(Global.EpicOreChance*70,Global.EpicOreChance*5000)
-	var legendaryOre = randi_range(Global.LegendaryOreChance*60,Global.LegendaryOreChance*5000)
+
+	var commonOre = Global.CommonOreChance*maxOre
+	var uncommonOre = Global.UncommonOreChance*maxOre
+	var rareOre = Global.RareOreChance*maxOre
+	var epicOre = Global.EpicOreChance*maxOre
+	var legendaryOre = Global.LegendaryOreChance*maxOre
+
+	print(str(commonOre+uncommonOre+rareOre+epicOre+legendaryOre)+"\n")
 	
 
-	for i in range(1000):
+	for i in range(maxOre):
 		
 		if i == 0:
 			var CaveStairs = preload("res://Nodes/Objekts/Stairs/CaveStairs.tscn").instantiate()
@@ -107,7 +111,7 @@ func _ready():
 			randNum(minX,maxX,minY,maxY)
 			LegendaryOre.global_position = Vector2(rand_x, rand_y)
 			add_child(LegendaryOre)
-		
+			
 	print("CommonOre "+str(commonOreCount))
 	print("UncommonOre "+str(uncommonOreCount))
 	print("RareOre "+str(rareOreCount))
@@ -117,4 +121,3 @@ func _ready():
 func randNum(minX,maxX,minY,maxY):
 	rand_x = randf_range(minX,maxX)
 	rand_y = randf_range(minY,maxY)
-	
