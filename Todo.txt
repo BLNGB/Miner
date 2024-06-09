@@ -9,4 +9,4 @@ popup bei hölen
 Sprites
 abbau animation 
 verschiedende erz größen 
-smoothe animation
+smoothe animation 50%

@@ -77,11 +77,9 @@ func _physics_process(delta):
 		anim.play("Idle",-1)
 	move_and_slide()
 
-
 func _on_timer_timeout():
 	Global.PlayerHp -= Global.DmgOverTime
 	$Timer.start()
-
 
 func _on_child_entered_tree(node):
 	
