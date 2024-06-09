@@ -11,14 +11,14 @@ var directionY
 
 func _process(delta):
 	var attackSpeed = 1 + (Global.SpeedLvl / 10)
-	$Pick.speed_scale = attackSpeed
 	if Input.is_action_pressed("ui_attack") and Global.DisableAttack == false:
 		get_node("Pickaxe/Pickaxe/CollisionPolygon2D").disabled = false 
 		if get_node("AnimatedSprite2D").flip_h == true:
-			$Pick.play("MineCC")
+			
+			$Pick.play("MineCC",-1,1+attackSpeed)
 			
 		elif get_node("AnimatedSprite2D").flip_h == false:
-			$Pick.play("Mine")
+			$Pick.play("Mine",-1,1+attackSpeed)
 			
 	else:
 		get_node("Pickaxe/Pickaxe/CollisionPolygon2D").disabled = true
@@ -46,24 +46,24 @@ func _physics_process(delta):
 	if directionX == -1:
 		get_node("AnimatedSprite2D").flip_h = true
 		$Pickaxe.set_rotation_degrees(0)
-		anim.play("Walk")
+		anim.play("Walk",-1)
 		
 	elif directionX == 1:
 		get_node("AnimatedSprite2D").flip_h = false
 		$Pickaxe.set_rotation_degrees(-90)
-		anim.play("Walk")
+		anim.play("Walk",-1)
 		
 	elif velocity.y == 0:
-		anim.play("Idle")
+		anim.play("Idle",-1)
 	directionY = Input.get_axis("ui_up", "ui_down")
 	velocity.y = directionY * SPEED
 	
 	if directionY == -1:
-		anim.play("Walk")
+		anim.play("Walk",-1)
 	elif directionY == 1:
-		anim.play("Walk")
+		anim.play("Walk",-1)
 	elif velocity.x == 0:
-		anim.play("Idle")
+		anim.play("Idle",-1)
 	move_and_slide()
 
 
