@@ -34,3 +34,6 @@ script = ExtResource("1_bjjuf")
 [node name="Player" parent="." instance=ExtResource("1_tk6ep")]
 
 [node name="UI" parent="." instance=ExtResource("2_luuyb")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.152941, 0.152941, 0.152941, 1)
