@@ -131,8 +131,12 @@ position = Vector2(88, 560)
 [node name="Player" parent="." instance=ExtResource("2_ilwii")]
 position = Vector2(487, 390)
 
-[node name="Cave" parent="." instance=ExtResource("4_lbt7u")]
-position = Vector2(207, 489)
+[node name="Cave1" parent="." instance=ExtResource("4_lbt7u")]
+position = Vector2(258, 449)
+
+[node name="Cave2" parent="." instance=ExtResource("4_lbt7u")]
+position = Vector2(253, 533)
+metadata/Cave = "Cave2"
 
 [node name="UI" parent="." instance=ExtResource("6_7wnte")]
 
