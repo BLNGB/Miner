@@ -4,7 +4,9 @@ var caveNr
 @onready var caveName = get_meta("Cave")
 
 func _ready():
-	print(caveName)
+	
+	Global.DisableAttack = false
+	
 	if caveName != null:
 		$Cave.texture = load("res://Sprites/Objekts/Caves/"+caveName+".png")
 
