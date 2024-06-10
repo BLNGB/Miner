@@ -1,6 +1,8 @@
 extends CanvasLayer
 
 func _process(delta):
+	if delta == delta:
+		pass
 	$CommonS/CommonL.text = str(Global.CommonOreCount)
 	$UncommonS/UncommonL.text = str(Global.UncommonOreCount)
 	$RareS/RareL.text = str(Global.RareOreCount)
@@ -15,6 +17,10 @@ func _process(delta):
 	$PlayerHP2/PlayerHpL.text = str(Global.PlayerHp)
 	if Global.PlayerHp == 0:
 		get_tree().change_scene_to_file("res://Nodes/Areas/outside.tscn")
+	if $PlayerHP2.value <= 50:
+		$PlayerHP2/PlayerHpL.set("theme_override_colors/font_color", Color(1.0,1.0,1.0,1.0))
+	else:
+		$PlayerHP2/PlayerHpL.set("theme_override_colors/font_color", Color(0.0,0.0,0.0,1.0))
 
 func _on_strength_pressed():
 	if Global.RareOreCount >= Global.CostST:
@@ -44,7 +50,7 @@ func _on_speed_pressed():
 	if Global.CommonOreCount >= Global.CostSP:
 		Global.SpeedLvl = Global.SpeedLvl + 1
 		Global.CommonOreCount = Global.CommonOreCount - Global.CostSP
-		Global.CostSP = roundi((Global.CostSP + 1) * 1.2)
+		Global.CostSP = roundi((Global.CostSP + 1) * 1.01)
 		$Control/CostBox/Cost.text = str(Global.CostSP)
 	else:
 		$AnimationPlayer.play("InsufficientFunds")
@@ -151,3 +157,20 @@ func _on_resist_mouse_exited():
 	$Control/CostBox.visible = false
 	Global.DisableAttack = false
 	Global.HoveredUpgrade = "N"
+
+
+func _on_tree_entered():
+	var scene = get_tree().current_scene.name
+	match scene:
+		"Outside": 
+			$PlayerHP2.texture_over = load("res://Sprites/Ui/HP Bars/OutsideBarTop.png")
+			$PlayerHP2.texture_under = load("res://Sprites/Ui/HP Bars/OutsideBarBottom.png")
+			$PlayerHP2.texture_progress = load("res://Sprites/Ui/HP Bars/OutsideBar.png")
+		"Cave1": 
+			$PlayerHP2.texture_under = load("res://Sprites/Ui/HP Bars/C1BarBottom.png")
+			$PlayerHP2.texture_over = load("res://Sprites/Ui/HP Bars/C1BarTop.png")
+			$PlayerHP2.texture_progress = load("res://Sprites/Ui/HP Bars/C1Bar.png")
+		"Cave2": 
+			$PlayerHP2.texture_under = load("res://Sprites/Ui/HP Bars/C2BarBottom.png")
+			$PlayerHP2.texture_over = load("res://Sprites/Ui/HP Bars/C2BarTop.png")
+			$PlayerHP2.texture_progress = load("res://Sprites/Ui/HP Bars/C2Bar.png")
