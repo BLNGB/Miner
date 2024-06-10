@@ -1,16 +1,18 @@
 extends StaticBody2D
 
 var caveNr
+@onready var caveName = get_meta("Cave")
 
+func _ready():
+	print(caveName)
+	if caveName != null:
+		$Cave.texture = load("res://Sprites/Objekts/Caves/"+caveName+".png")
 
 func _on_area_2d_body_entered(body:CharacterBody2D):
 	if body.name == "Player":
-		
 
-		var path = $Sprite2D.get_texture().get_load_path()
-		var stringArr = path.split("e")
-		var stringArr2 = stringArr[3].split(".")
-		caveNr = stringArr2[0]
+		var stringArr = caveName.split("e")
+		caveNr = stringArr[1]
 		
 		Global.CamLimitLeft = 0
 		Global.CamLimitRight = 0
