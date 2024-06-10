@@ -1,11 +1,12 @@
-flip Pickaxe
-Dmg over time effect
 Health regen upgrade
 Armore/ fire res upgrade
 base value scaling (ores)
 base HP scaling (ores)
 schwarzblende
+popup bei hölen
 
 
-optional
-bessere animation 
+Sprites
+abbau animation 
+verschiedende erz größen 
+smoothe animation 50%
