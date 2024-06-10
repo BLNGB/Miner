@@ -1,9 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqapwy2eg2vwf"]
+[gd_scene load_steps=5 format=3 uid="uid://bqapwy2eg2vwf"]
 
 [ext_resource type="Script" path="res://Nodes/Objekts/Caves/Cave.gd" id="1_25kgl"]
+[ext_resource type="Texture2D" uid="uid://srrgbjh1nwn0" path="res://Sprites/Objekts/Caves/Cave1.png" id="2_1wrcp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h035w"]
-size = Vector2(33, 30)
+size = Vector2(73, 47)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1gmi8"]
 size = Vector2(35, 32)
@@ -13,9 +14,10 @@ script = ExtResource("1_25kgl")
 metadata/Cave = "Cave1"
 
 [node name="Cave" type="Sprite2D" parent="."]
+texture = ExtResource("2_1wrcp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 13)
+position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_h035w")
 
 [node name="Area2D" type="Area2D" parent="."]
