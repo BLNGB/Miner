@@ -17,7 +17,7 @@ func _process(delta):
 
 	
 func _on_common_ore_tree_entered():
-	var scene = get_tree().current_scene.name
+	var scene = "Cave"+str(Global.currentCave)
 	match scene:
 		"Cave1": $CommonOre.texture = load("res://Sprites/Objekts/Ores/CommonOrs/CommonOreC1.png")
 		"Cave2": $CommonOre.texture = load("res://Sprites/Objekts/Ores/CommonOrs/CommonOreC2.png")

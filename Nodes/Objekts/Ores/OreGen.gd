@@ -1,3 +1,4 @@
+class_name OreGen
 extends StaticBody2D
 
 var rand_x
@@ -13,36 +14,8 @@ var maxOre= 500
 
 func _ready(): 
 	randomize()
-	
+
 	if get_parent().name == "Cave1":
-		Global.CommonOreChance = 0.5
-		Global.UncommonOreChance = 0.2
-		Global.RareOreChance = 0.15
-		Global.EpicOreChance = 0.1
-		Global.LegendaryOreChance = 0.05
-		
-	if get_parent().name == "Cave2":
-		Global.CommonOreChance = 0.5
-		Global.UncommonOreChance = 0.2
-		Global.RareOreChance = 0.15
-		Global.EpicOreChance = 0.1
-		Global.LegendaryOreChance = 0.05
-		
-	if get_parent().name == "Cave3":
-		Global.CommonOreChance = 0.5
-		Global.UncommonOreChance = 0.2
-		Global.RareOreChance = 0.15
-		Global.EpicOreChance = 0.1
-		Global.LegendaryOreChance = 0.05
-		
-	if get_parent().name == "Cave4":
-		Global.CommonOreChance = 0.5
-		Global.UncommonOreChance = 0.2
-		Global.RareOreChance = 0.15
-		Global.EpicOreChance = 0.1
-		Global.LegendaryOreChance = 0.05
-	
-	if get_parent().name == "Cave5":
 		Global.CommonOreChance = 0.5
 		Global.UncommonOreChance = 0.2
 		Global.RareOreChance = 0.15
@@ -61,14 +34,14 @@ func _ready():
 	var epicOre = Global.EpicOreChance*maxOre
 	var legendaryOre = Global.LegendaryOreChance*maxOre
 
-	print(str(commonOre+uncommonOre+rareOre+epicOre+legendaryOre)+"\n")
+	#print(str(commonOre+uncommonOre+rareOre+epicOre+legendaryOre)+"\n")
 	
 
 	for i in range(maxOre):
 		
 		if i == 0:
 			var CaveStairs = preload("res://Nodes/Objekts/Stairs/CaveStairs.tscn").instantiate()
-			randNum(minX,maxX,minY,maxY)
+			randNum()
 			CaveStairs.global_position = Vector2(rand_x, rand_y)
 			add_child(CaveStairs)
 			
@@ -76,7 +49,7 @@ func _ready():
 			commonOreCount+=1
 			var CommonOre = preload("res://Nodes/Objekts/Ores/CommonOre.tscn").instantiate()
 	
-			randNum(minX,maxX,minY,maxY)
+			randNum()
 			CommonOre.global_position = Vector2(rand_x, rand_y)
 			add_child(CommonOre)
 			
@@ -84,7 +57,7 @@ func _ready():
 			uncommonOreCount+=1
 			var UncommonOre = preload("res://Nodes/Objekts/Ores/UncommonOre.tscn").instantiate()
 
-			randNum(minX,maxX,minY,maxY)
+			randNum()
 			UncommonOre.global_position = Vector2(rand_x, rand_y)
 			add_child(UncommonOre)
 			
@@ -92,7 +65,7 @@ func _ready():
 			rareOreCount+=1
 			var RareOre = preload("res://Nodes/Objekts/Ores/RareOre.tscn").instantiate()
 
-			randNum(minX,maxX,minY,maxY)
+			randNum()
 			RareOre.global_position = Vector2(rand_x, rand_y)
 			add_child(RareOre)
 		
@@ -100,7 +73,7 @@ func _ready():
 			epicOreCount+=1
 			var EpicOre = preload("res://Nodes/Objekts/Ores/EpicOre.tscn").instantiate()
 
-			randNum(minX,maxX,minY,maxY)
+			randNum()
 			EpicOre.global_position = Vector2(rand_x, rand_y)
 			add_child(EpicOre)
 		
@@ -108,16 +81,16 @@ func _ready():
 			legendaryOreCount+=1
 			var LegendaryOre = preload("res://Nodes/Objekts/Ores/LegendaryOre.tscn").instantiate()
 
-			randNum(minX,maxX,minY,maxY)
+			randNum()
 			LegendaryOre.global_position = Vector2(rand_x, rand_y)
 			add_child(LegendaryOre)
 			
-	print("CommonOre "+str(commonOreCount))
-	print("UncommonOre "+str(uncommonOreCount))
-	print("RareOre "+str(rareOreCount))
-	print("EpicOre "+str(epicOreCount))
-	print("LegendaryOre "+str(legendaryOreCount))
+	#print("CommonOre "+str(commonOreCount))
+	#print("UncommonOre "+str(uncommonOreCount))
+	#print("RareOre "+str(rareOreCount))
+	#print("EpicOre "+str(epicOreCount))
+	#print("LegendaryOre "+str(legendaryOreCount))
 		
-func randNum(minX,maxX,minY,maxY):
+func randNum():
 	rand_x = randf_range(minX,maxX)
 	rand_y = randf_range(minY,maxY)
