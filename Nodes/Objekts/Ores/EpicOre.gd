@@ -22,7 +22,7 @@ func _on_area_2d_mouse_exited():
 	$TextureProgressBar.visible = false
 
 func _on_epic_ore_tree_entered():
-	var scene = get_tree().current_scene.name
+	var scene = "Cave"+str(Global.currentCave)
 	match scene:
 		"Cave1": $EpicOre.texture = load("res://Sprites/Objekts/Ores/EpicOrs/EpicOreC1.png")
 		"Cave2": $EpicOre.texture = load("res://Sprites/Objekts/Ores/EpicOrs/EpicOreC2.png")

@@ -22,7 +22,7 @@ func _on_area_2d_mouse_exited():
 	$TextureProgressBar.visible = false
 
 func _on_rare_ore_tree_entered():
-	var scene = get_tree().current_scene.name
+	var scene = "Cave"+str(Global.currentCave)
 	match scene:
 		"Cave1": $RareOre.texture = load("res://Sprites/Objekts/Ores/RareOrs/RareOreC1.png")
 		"Cave2": $RareOre.texture = load("res://Sprites/Objekts/Ores/RareOrs/RareOreC2.png")

@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://drku52586jxrr"]
+
+[ext_resource type="Script" path="res://Nodes/Areas/Cave.gd" id="1_rwn1e"]
+[ext_resource type="TileSet" uid="uid://bbrjee0swxeer" path="res://Sprites/Ground/InCaves/Ground.tres" id="2_a52ea"]
+[ext_resource type="PackedScene" uid="uid://cppcmkv1oiim3" path="res://Nodes/Objekts/Ores/OreGen.tscn" id="3_vcegf"]
+[ext_resource type="PackedScene" uid="uid://55koddjtc6jy" path="res://Nodes/Player/Player.tscn" id="5_k6elp"]
+[ext_resource type="PackedScene" uid="uid://c3g3u8e8rn51w" path="res://Nodes/Ui/ui.tscn" id="6_ydh1n"]
+
+[sub_resource type="GDScript" id="GDScript_ox3b0"]
+script/source = "extends TileMap
+
+var minX = -1
+var maxX = 1252/15.5
+
+var minY = -1
+var maxY =  750/15.5
+
+func _ready():
+	
+
+	var sceneName =get_tree().current_scene.name
+	
+	print(sceneName)
+
+	if sceneName == \"Cave1\":
+		for x in range(minX,maxX):
+			for y in range(minY,maxY):
+				set_cell(0,Vector2i(x,y),1,Vector2(0,0))
+				
+	if sceneName == \"Cave2\":
+		for x in range(minX,maxX):
+			for y in range(minY,maxY):
+				set_cell(0,Vector2i(x,y),1,Vector2(1,0))
+				
+	if sceneName == \"Cave3\":
+		for x in range(minX,maxX):
+			for y in range(minY,maxY):
+				set_cell(0,Vector2i(x,y),1,Vector2(2,0))
+				
+	if sceneName == \"Cave4\":
+		for x in range(minX,maxX):
+			for y in range(minY,maxY):
+				set_cell(0,Vector2i(x,y),1,Vector2(3,0))
+				
+	if sceneName == \"Cave5\":
+		for x in range(minX,maxX):
+			for y in range(minY,maxY):
+				set_cell(0,Vector2i(x,y),1,Vector2(0,1))
+			
+"
+
+[node name="Cave" type="Node2D"]
+script = ExtResource("1_rwn1e")
+
+[node name="Ground" type="Node2D" parent="."]
+script = ExtResource("1_rwn1e")
+
+[node name="TileMap" type="TileMap" parent="Ground"]
+tile_set = ExtResource("2_a52ea")
+format = 2
+layer_0/tile_data = PackedInt32Array(-1, 0, 0, 2687048, 0, 0)
+script = SubResource("GDScript_ox3b0")
+
+[node name="oreGen" parent="." instance=ExtResource("3_vcegf")]
+
+[node name="Player" parent="." instance=ExtResource("5_k6elp")]
+position = Vector2(31, 24)
+
+[node name="UI" parent="." instance=ExtResource("6_ydh1n")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.152941, 0.152941, 0.152941, 1)

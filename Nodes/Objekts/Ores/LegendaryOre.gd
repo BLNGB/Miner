@@ -21,7 +21,7 @@ func _on_area_2d_mouse_exited():
 	$TextureProgressBar.visible = false
 
 func _on_legendary_ore_tree_entered():
-	var scene = get_tree().current_scene.name
+	var scene = "Cave"+str(Global.currentCave)
 	match scene:
 		"Cave1": $LegendaryOre.texture = load("res://Sprites/Objekts/Ores/LegendaryOrs/LegendaryOreC1.png")
 		"Cave2": $LegendaryOre.texture = load("res://Sprites/Objekts/Ores/LegendaryOrs/LegendaryOreC2.png")
