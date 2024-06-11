@@ -6,7 +6,6 @@ var caveNr
 
 func _ready():
 	
-	Global.DmgOverTime = dmgOverTime
 
 	if caveName != null:
 		$CaveEntrance.texture = load("res://Sprites/Objekts/Caves/"+caveName+".png")
@@ -14,6 +13,8 @@ func _ready():
 
 func _on_area_2d_body_entered(body):
 	if body.name == "Player":
+		
+		Global.DmgOverTime = dmgOverTime
 		
 		var stringArr = caveName.split("e")
 		caveNr = stringArr[1]
