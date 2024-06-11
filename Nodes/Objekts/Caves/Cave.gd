@@ -10,7 +10,7 @@ func _ready():
 	if caveName != null:
 		$Cave.texture = load("res://Sprites/Objekts/Caves/"+caveName+".png")
 
-func _on_area_2d_body_entered(body:CharacterBody2D):
+func _on_area_2d_body_entered(body):
 	if body.name == "Player":
 
 		var stringArr = caveName.split("e")

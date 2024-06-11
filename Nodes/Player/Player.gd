@@ -12,7 +12,7 @@ var directionY
 func _process(delta):
 	if delta == delta:
 		pass
-	var attackSpeed = 1 + (Global.SpeedLvl/100)
+	var attackSpeed = 1 + (Global.SpeedLvl/10)
 	
 	if Input.is_action_pressed("ui_attack") and Global.DisableAttack == false: 
 		if get_node("AnimatedSprite2D").flip_h == true:
@@ -80,11 +80,18 @@ func _physics_process(delta):
 		anim.play("Idle")
 	move_and_slide()
 
-func _on_timer_timeout():
-	Global.PlayerHp -= Global.DmgOverTime
-	$Timer.start()
-
 func _on_child_entered_tree(_node):
-	
 	if get_tree().current_scene.name.contains("Cave"):
-		$PointLight2D.visible= true
+		$Light.visible= true
+
+func _on_health_regen_timeout():
+	if get_tree().current_scene.name.contains("Outside"):
+		pass
+	elif Global.PlayerHp < 100:
+		Global.PlayerHp += Global.HealthRegenLvl
+	$HealthRegen.start()
+
+func _on_dmg_over_time_timeout():
+	if (Global.DmgOverTime-Global.ResistLvl) >= 0:
+		Global.PlayerHp -= (Global.DmgOverTime-Global.ResistLvl)
+	$DmgOverTime.start()
