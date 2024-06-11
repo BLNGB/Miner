@@ -1,0 +1,272 @@
+[gd_scene load_steps=14 format=3 uid="uid://drsgmofsk3u33"]
+
+[ext_resource type="Texture2D" uid="uid://cjuw0jj3mtede" path="res://Sprites/NPCs/ShopKeeper/ShopKeeperIdle.png" id="1_hgggq"]
+[ext_resource type="Script" path="res://Nodes/NPCs/shop_keeper.gd" id="1_todch"]
+[ext_resource type="Texture2D" uid="uid://curcyk63jq6wf" path="res://Sprites/NPCs/ShopKeeper/ItemButton.png" id="2_6gbg4"]
+[ext_resource type="FontFile" uid="uid://cs8itvsl4quvj" path="res://Sprites/NPCs/ShopKeeper/nevis.ttf" id="3_cthy5"]
+[ext_resource type="Texture2D" uid="uid://q3wn15dq38fv" path="res://Sprites/NPCs/ShopKeeper/PermStr.png" id="3_j4bhs"]
+[ext_resource type="Texture2D" uid="uid://c6ul2s13g5m6i" path="res://Sprites/NPCs/ShopKeeper/LvlCertificat.png" id="5_aqd8x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glsba"]
+atlas = ExtResource("1_hgggq")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_624sm"]
+atlas = ExtResource("1_hgggq")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aoiij"]
+atlas = ExtResource("1_hgggq")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8876"]
+atlas = ExtResource("1_hgggq")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rmwu"]
+atlas = ExtResource("1_hgggq")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ig6in"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glsba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_624sm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aoiij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8876")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rmwu")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pm8r2"]
+size = Vector2(20, 32)
+
+[node name="ShopKeeper" type="Area2D"]
+script = ExtResource("1_todch")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ig6in")
+animation = &"Idle"
+
+[node name="ShopHitBox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_pm8r2")
+
+[node name="ShopWindow" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+
+[node name="ItemList" type="ItemList" parent="ShopWindow"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 18.0
+offset_right = 124.0
+offset_bottom = 62.0
+
+[node name="Item1" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 36.0
+offset_bottom = 36.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_j4bhs")
+
+[node name="Item2" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 4.0
+offset_right = 47.0
+offset_bottom = 36.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item3" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 4.0
+offset_right = 80.0
+offset_bottom = 36.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item4" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 4.0
+offset_right = 69.0
+offset_bottom = 36.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item5" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 4.0
+offset_right = 58.0
+offset_bottom = 36.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item6" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 4.0
+offset_right = 96.0
+offset_bottom = 36.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item7" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 4.0
+offset_right = 107.0
+offset_bottom = 36.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item8" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 4.0
+offset_right = 118.0
+offset_bottom = 36.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item9" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 4.0
+offset_right = 129.0
+offset_bottom = 36.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item10" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 4.0
+offset_right = 140.0
+offset_bottom = 36.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("5_aqd8x")
+
+[node name="Item11" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 20.0
+offset_right = 36.0
+offset_bottom = 52.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item12" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 20.0
+offset_right = 47.0
+offset_bottom = 52.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item13" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 20.0
+offset_right = 58.0
+offset_bottom = 52.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item14" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 20.0
+offset_right = 69.0
+offset_bottom = 52.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item15" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 20.0
+offset_right = 80.0
+offset_bottom = 52.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item16" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 20.0
+offset_right = 96.0
+offset_bottom = 52.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item17" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 20.0
+offset_right = 107.0
+offset_bottom = 52.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item18" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 20.0
+offset_right = 118.0
+offset_bottom = 52.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Item19" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 20.0
+offset_right = 129.0
+offset_bottom = 52.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="Iteem20" type="TextureButton" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 20.0
+offset_right = 140.0
+offset_bottom = 52.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_6gbg4")
+
+[node name="PriceText" type="Label" parent="ShopWindow/ItemList"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 30.0
+offset_right = 3869.0
+offset_bottom = 430.0
+scale = Vector2(0.03, 0.03)
+theme_override_fonts/font = ExtResource("3_cthy5")
+theme_override_font_sizes/font_size = 100
+text = "Dieses item gibt dir das und das 
+
+Es costet : Zahl     \"\"\"     Ore"
