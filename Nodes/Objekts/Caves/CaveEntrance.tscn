@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bqapwy2eg2vwf"]
 
-[ext_resource type="Script" path="res://Nodes/Objekts/Caves/Cave.gd" id="1_25kgl"]
-[ext_resource type="Texture2D" uid="uid://srrgbjh1nwn0" path="res://Sprites/Objekts/Caves/Cave1.png" id="2_1wrcp"]
+[ext_resource type="Script" path="res://Nodes/Objekts/Caves/CaveEntrance.gd" id="1_j7lwy"]
+[ext_resource type="Texture2D" uid="uid://srrgbjh1nwn0" path="res://Sprites/Objekts/Caves/Cave1.png" id="2_qa7w6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h035w"]
 size = Vector2(73, 47)
@@ -9,12 +9,13 @@ size = Vector2(73, 47)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1gmi8"]
 size = Vector2(35, 32)
 
-[node name="Cave" type="StaticBody2D"]
-script = ExtResource("1_25kgl")
-metadata/Cave = "Cave1"
+[node name="CaveEntrance" type="StaticBody2D"]
+script = ExtResource("1_j7lwy")
+metadata/Cave = ""
+metadata/DmgOverTime = 0
 
-[node name="Cave" type="Sprite2D" parent="."]
-texture = ExtResource("2_1wrcp")
+[node name="CaveEntrance" type="Sprite2D" parent="."]
+texture = ExtResource("2_qa7w6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 1.5)

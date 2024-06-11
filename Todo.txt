@@ -6,6 +6,9 @@ schwarzblende
 popup bei hölen
 
 
+
+spitzhaken movement nicht korrekt  (bei angriff in die andere richtung gucken )
+
 Sprites
 abbau animation 
 verschiedende erz größen 

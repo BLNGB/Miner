@@ -1,5 +1,7 @@
 extends Node
 
+var currentCave = 0
+
 var CommonOreCount = 0
 var UncommonOreCount = 0
 var RareOreCount = 0
