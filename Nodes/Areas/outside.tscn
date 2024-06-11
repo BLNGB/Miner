@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cyvacvvubsj6q"]
+[gd_scene load_steps=12 format=3 uid="uid://cyvacvvubsj6q"]
 
 [ext_resource type="Texture2D" uid="uid://uxphuyiciigx" path="res://Sprites/Ground/Outside/GraßUndWeg.png" id="1_ftflb"]
 [ext_resource type="Script" path="res://Nodes/Areas/outside.gd" id="1_iofd8"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bqapwy2eg2vwf" path="res://Nodes/Objekts/Caves/cave.tscn" id="4_lbt7u"]
 [ext_resource type="PackedScene" uid="uid://c3g3u8e8rn51w" path="res://Nodes/Ui/ui.tscn" id="6_7wnte"]
 [ext_resource type="PackedScene" uid="uid://uvs7k5tevakl" path="res://Nodes/Ui/CheatMenue.tscn" id="7_h5yvi"]
+[ext_resource type="PackedScene" uid="uid://sahotgxx8wh4" path="res://Nodes/NPCs/WisdomSlime/wisdom_slime.tscn" id="8_4yn1q"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_alr20"]
 
@@ -141,3 +142,6 @@ metadata/Cave = "Cave2"
 [node name="UI" parent="." instance=ExtResource("6_7wnte")]
 
 [node name="CanvasLayer" parent="." instance=ExtResource("7_h5yvi")]
+
+[node name="WisdomSlime" parent="." instance=ExtResource("8_4yn1q")]
+position = Vector2(1080, 56)

@@ -87,7 +87,7 @@ func _on_child_entered_tree(_node):
 func _on_health_regen_timeout():
 	if get_tree().current_scene.name.contains("Outside"):
 		pass
-	else:
+	elif Global.PlayerHp < 100:
 		Global.PlayerHp += Global.HealthRegenLvl
 	$HealthRegen.start()
 
