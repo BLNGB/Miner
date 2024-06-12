@@ -22,13 +22,9 @@ func _on_area_2d_mouse_exited():
 	$TextureProgressBar.visible = false
 	
 func _on_uncommon_ore_tree_entered():
-	var scene = "Cave"+str(Global.currentCave)
-	match scene:
-		"Cave1": $UncommonOre.texture = load("res://Sprites/Objekts/Ores/UncommonOrs/UncommonOreC1.png")
-		"Cave2": $UncommonOre.texture = load("res://Sprites/Objekts/Ores/UncommonOrs/UncommonOreC2.png")
-		"Cave3": $UncommonOre.texture = load("res://Sprites/Objekts/Ores/UncommonOrs/UncommonOreC3.png")
-		"Cave4": $UncommonOre.texture = load("res://Sprites/Objekts/Ores/UncommonOrs/UncommonOreC4.png")
-		"Cave5": $UncommonOre.texture = load("res://Sprites/Objekts/Ores/UncommonOrs/UncommonOreC5.png")
+
+	$UncommonOre.texture = load("res://Sprites/Objekts/Ores/UncommonOrs/UncommonOreC"+Global.currentCave+".png")
+
 
 
 func _on_hurtbox_area_entered(area):

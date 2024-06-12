@@ -17,13 +17,8 @@ func _process(delta):
 
 	
 func _on_common_ore_tree_entered():
-	var scene = "Cave"+str(Global.currentCave)
-	match scene:
-		"Cave1": $CommonOre.texture = load("res://Sprites/Objekts/Ores/CommonOrs/CommonOreC1.png")
-		"Cave2": $CommonOre.texture = load("res://Sprites/Objekts/Ores/CommonOrs/CommonOreC2.png")
-		"Cave3": $CommonOre.texture = load("res://Sprites/Objekts/Ores/CommonOrs/CommonOreC3.png")
-		"Cave4": $CommonOre.texture = load("res://Sprites/Objekts/Ores/CommonOrs/CommonOreC4.png")
-		"Cave5": $CommonOre.texture = load("res://Sprites/Objekts/Ores/CommonOrs/CommonOreC5.png")
+
+	$CommonOre.texture = load("res://Sprites/Objekts/Ores/CommonOrs/CommonOreC"+Global.currentCave+".png")
 		
 func _on_hurt_box_area_entered(area):
 	if area.name == "Pickaxe":

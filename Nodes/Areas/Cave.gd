@@ -27,13 +27,13 @@ func groundGen():
 			"Cave3":
 				for x in range(minX,maxX):
 					for y in range(minY,maxY):
-						tileMap.set_cell.set_cell(0,Vector2i(x,y),0,Vector2(2,0))
+						tileMap.set_cell(0,Vector2i(x,y),0,Vector2(2,0))
 			"Cave4":
 				for x in range(minX,maxX):
 					for y in range(minY,maxY):
-						tileMap.set_cell.set_cell(0,Vector2i(x,y),0,Vector2(3,0))
+						tileMap.set_cell(0,Vector2i(x,y),0,Vector2(3,0))
 			"Cave5":
 				for x in range(minX,maxX):
 					for y in range(minY,maxY):
-						tileMap.set_cell.set_cell(0,Vector2i(x,y),0,Vector2(0,1))
+						tileMap.set_cell(0,Vector2i(x,y),0,Vector2(0,1))
 
