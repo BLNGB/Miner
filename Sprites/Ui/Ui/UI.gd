@@ -127,6 +127,7 @@ func _on_value_mouse_exited():
 
 #HP Bar Sprite Handling
 func _on_tree_entered():
+<<<<<<< HEAD
 		if int(Global.currentCave)>0:
 			$PlayerHP2.texture_under = load("res://Sprites/Ui/HP Bars/C"+str(Global.currentCave)+"BarBottom.png")
 			$PlayerHP2.texture_over = load("res://Sprites/Ui/HP Bars/C"+str(Global.currentCave)+"BarTop.png")
@@ -135,6 +136,19 @@ func _on_tree_entered():
 			$PlayerHP2.texture_over = load("res://Sprites/Ui/HP Bars/OutsideBarTop.png")
 			$PlayerHP2.texture_under = load("res://Sprites/Ui/HP Bars/OutsideBarBottom.png")
 			$PlayerHP2.texture_progress = load("res://Sprites/Ui/HP Bars/OutsideBar.png")
+=======
+
+
+
+	if int(Global.currentCave) > 0:
+		$PlayerHP2.texture_over = load("res://Sprites/Ui/HP Bars/C"+str(Global.currentCave)+"BarTop.png")
+		$PlayerHP2.texture_under = load("res://Sprites/Ui/HP Bars/C"+str(Global.currentCave)+"BarBottom.png")
+		$PlayerHP2.texture_progress = load("res://Sprites/Ui/HP Bars/C"+str(Global.currentCave)+"Bar.png") 
+	else :
+		$PlayerHP2.texture_over = load("res://Sprites/Ui/HP Bars/OutsideBarTop.png")
+		$PlayerHP2.texture_under = load("res://Sprites/Ui/HP Bars/OutsideBarBottom.png")
+		$PlayerHP2.texture_progress = load("res://Sprites/Ui/HP Bars/OutsideBar.png") 
+>>>>>>> 17cd3fda5d4a4b5f3ed05b325a4eb250dfbfcb40
 
 
 

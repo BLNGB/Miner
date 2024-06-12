@@ -13,6 +13,11 @@ size = Vector2(35, 32)
 script = ExtResource("1_j7lwy")
 metadata/Cave = ""
 metadata/DmgOverTime = 0
+metadata/commonOreChance = 0.0
+metadata/uncommonOreChance = 0.0
+metadata/rareOreChance = 0.0
+metadata/epicOreChance = 0.0
+metadata/legendaryOreChance = 0.0
 
 [node name="CaveEntrance" type="Sprite2D" parent="."]
 texture = ExtResource("2_qa7w6")
