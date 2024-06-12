@@ -134,17 +134,22 @@ position = Vector2(487, 390)
 
 [node name="Cave1" parent="." instance=ExtResource("4_lbt7u")]
 position = Vector2(258, 449)
-metadata/Cave = "Cave1"
+metadata/Cave = "1"
 metadata/DmgOverTime = 1
+metadata/commonOreChance = 0.5
+metadata/uncommonOreChance = 0.2
+metadata/rareOreChance = 0.1
+metadata/epicOreChance = 0.15
+metadata/legendaryOreChance = 0.05
 
 [node name="Cave2" parent="." instance=ExtResource("4_lbt7u")]
 position = Vector2(384, 551)
-metadata/Cave = "Cave2"
+metadata/Cave = "2"
 metadata/DmgOverTime = 2
 
 [node name="Cave3" parent="." instance=ExtResource("4_lbt7u")]
 position = Vector2(119.742, 421.04)
-metadata/Cave = "Cave3"
+metadata/Cave = "3"
 metadata/DmgOverTime = 10
 
 [node name="UI" parent="." instance=ExtResource("6_7wnte")]
