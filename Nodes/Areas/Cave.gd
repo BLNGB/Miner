@@ -17,6 +17,11 @@ func _ready():
 	groundGen()
 	oreGen()
 	
+	
+func randNum():
+	rand_x = randf_range(minXC,maxXC)
+	rand_y = randf_range(minYC,maxYC)
+
 func groundGen():
 	var minX = -1
 	var maxX = 1252/15.5
@@ -68,7 +73,6 @@ func oreGen():
 
 	print(str(commonOre+uncommonOre+rareOre+epicOre+legendaryOre)+"\n")
 	
-
 	for i in range(maxOre):
 		
 		if i == 0:
@@ -123,6 +127,3 @@ func oreGen():
 	print("EpicOre "+str(epicOreCount))
 	print("LegendaryOre "+str(legendaryOreCount))
 		
-func randNum():
-	rand_x = randf_range(minXC,maxXC)
-	rand_y = randf_range(minYC,maxYC)

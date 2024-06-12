@@ -158,3 +158,5 @@ metadata/DmgOverTime = 10
 
 [node name="WisdomSlime" parent="." instance=ExtResource("8_4yn1q")]
 position = Vector2(1080, 56)
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
