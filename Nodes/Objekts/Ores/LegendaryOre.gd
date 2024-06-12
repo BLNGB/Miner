@@ -21,13 +21,8 @@ func _on_area_2d_mouse_exited():
 	$TextureProgressBar.visible = false
 
 func _on_legendary_ore_tree_entered():
-	var scene = "Cave"+str(Global.currentCave)
-	match scene:
-		"Cave1": $LegendaryOre.texture = load("res://Sprites/Objekts/Ores/LegendaryOrs/LegendaryOreC1.png")
-		"Cave2": $LegendaryOre.texture = load("res://Sprites/Objekts/Ores/LegendaryOrs/LegendaryOreC2.png")
-		"Cave3": $LegendaryOre.texture = load("res://Sprites/Objekts/Ores/LegendaryOrs/LegendaryOreC3.png")
-		"Cave4": $LegendaryOre.texture = load("res://Sprites/Objekts/Ores/LegendaryOrs/LegendaryOreC4.png")
-		"Cave5": $LegendaryOre.texture = load("res://Sprites/Objekts/Ores/LegendaryOrs/LegendaryOreC5.png")
+
+	$LegendaryOre.texture = load("res://Sprites/Objekts/Ores/LegendaryOrs/LegendaryOreC"+Global.currentCave+".png")
 
 func _on_hurt_box_area_entered(area):
 	if area.name == "Pickaxe":

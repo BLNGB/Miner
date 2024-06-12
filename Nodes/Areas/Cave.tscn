@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c3jy28yqo7rpx" path="res://Sprites/Ground/InCaves/Cave Boden.png" id="2_5as4s"]
 [ext_resource type="PackedScene" uid="uid://cppcmkv1oiim3" path="res://Nodes/Objekts/Ores/OreGen.tscn" id="3_vcegf"]
 [ext_resource type="PackedScene" uid="uid://55koddjtc6jy" path="res://Nodes/Player/Player.tscn" id="5_k6elp"]
-[ext_resource type="PackedScene" uid="uid://c3g3u8e8rn51w" path="res://Nodes/Ui/ui.tscn" id="6_ydh1n"]
+[ext_resource type="PackedScene" uid="uid://c3g3u8e8rn51w" path="res://Sprites/Ui/Ui/ui.tscn" id="6_ydh1n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3d0oy"]
 texture = ExtResource("2_5as4s")

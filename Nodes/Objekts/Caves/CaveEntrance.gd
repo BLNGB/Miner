@@ -6,7 +6,6 @@ var caveNr
 
 func _ready():
 	
-
 	if caveName != null:
 		$CaveEntrance.texture = load("res://Sprites/Objekts/Caves/"+caveName+".png")
 		

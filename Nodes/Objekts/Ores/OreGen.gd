@@ -34,7 +34,7 @@ func _ready():
 	var epicOre = Global.EpicOreChance*maxOre
 	var legendaryOre = Global.LegendaryOreChance*maxOre
 
-	#print(str(commonOre+uncommonOre+rareOre+epicOre+legendaryOre)+"\n")
+	print(str(commonOre+uncommonOre+rareOre+epicOre+legendaryOre)+"\n")
 	
 
 	for i in range(maxOre):
@@ -85,11 +85,11 @@ func _ready():
 			LegendaryOre.global_position = Vector2(rand_x, rand_y)
 			add_child(LegendaryOre)
 			
-	#print("CommonOre "+str(commonOreCount))
-	#print("UncommonOre "+str(uncommonOreCount))
-	#print("RareOre "+str(rareOreCount))
-	#print("EpicOre "+str(epicOreCount))
-	#print("LegendaryOre "+str(legendaryOreCount))
+	print("CommonOre "+str(commonOreCount))
+	print("UncommonOre "+str(uncommonOreCount))
+	print("RareOre "+str(rareOreCount))
+	print("EpicOre "+str(epicOreCount))
+	print("LegendaryOre "+str(legendaryOreCount))
 		
 func randNum():
 	rand_x = randf_range(minX,maxX)
