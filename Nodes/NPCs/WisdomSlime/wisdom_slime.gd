@@ -13,6 +13,8 @@ func _ready():
 	
 	
 func _physics_process(delta):
+	if delta == delta:
+		pass
 	if chase == true:
 		directionX = (player.position.x - self.position.x)
 		print(directionX)

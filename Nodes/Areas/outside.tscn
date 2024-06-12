@@ -145,10 +145,15 @@ metadata/epicOreChance = 0.1
 position = Vector2(384, 551)
 metadata/Cave = "2"
 metadata/DmgOverTime = 2
+<<<<<<< HEAD
+metadata/commonOreChance = 100.0
+metadata/legendaryOreChance = 0.01
+=======
 metadata/commonOreChance = 0.2
 metadata/uncommonOreChance = 0.1
 metadata/rareOreChance = 0.15
 metadata/epicOreChance = 0.1
+>>>>>>> 485f9544534693bdb43f5dd6695427545d2a5909
 
 [node name="Cave3" parent="." instance=ExtResource("4_lbt7u")]
 position = Vector2(119.742, 421.04)

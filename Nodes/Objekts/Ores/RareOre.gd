@@ -2,17 +2,19 @@ extends StaticBody2D
 @onready var i = randi_range(1,15)
 
 func _process(delta):
-		$TextureProgressBar/Label.text = str($TextureProgressBar.value) + "x " + str(i+1)
-		if $TextureProgressBar.value != $TextureProgressBar.max_value: 
-			$TextureProgressBar.visible = true
-		if $TextureProgressBar.value == $TextureProgressBar.min_value:
-			Global.RareOreCount = Global.RareOreCount + Global.ValueLvl
-			if i != 0:
-				i = i-1
-				$TextureProgressBar.value = $TextureProgressBar.max_value
-				$TextureProgressBar/Label.text = str($TextureProgressBar.value) + "x " + str(i)
-			else:
-				queue_free()
+	if delta == delta:
+		pass
+	$TextureProgressBar/Label.text = str($TextureProgressBar.value) + "x " + str(i+1)
+	if $TextureProgressBar.value != $TextureProgressBar.max_value: 
+		$TextureProgressBar.visible = true
+	if $TextureProgressBar.value == $TextureProgressBar.min_value:
+		Global.RareOreCount = Global.RareOreCount + Global.ValueLvl
+		if i != 0:
+			i = i-1
+			$TextureProgressBar.value = $TextureProgressBar.max_value
+			$TextureProgressBar/Label.text = str($TextureProgressBar.value) + "x " + str(i)
+		else:
+			queue_free()
 		
 func _on_area_2d_mouse_entered():
 	$TextureProgressBar.visible = true
