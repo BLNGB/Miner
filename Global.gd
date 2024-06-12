@@ -8,11 +8,11 @@ var RareOreCount = 0
 var EpicOreCount = 0
 var LegendaryOreCount = 0
 
-var CommonOreChance = 1
-var UncommonOreChance = 1
-var RareOreChance = 1
-var EpicOreChance = 1
-var LegendaryOreChance = 1
+var CommonOreChance = 0
+var UncommonOreChance = 0
+var RareOreChance = 0
+var EpicOreChance = 0
+var LegendaryOreChance = 0
 
 var StrengthLvl = 1
 var ValueLvl = 1
