@@ -127,20 +127,16 @@ func _on_value_mouse_exited():
 
 #HP Bar Sprite Handling
 func _on_tree_entered():
-	var scene = get_tree().current_scene.name
-	match scene:
-		"Outside": 
+	
+		if int(Global.currentCave)>0:
+			$PlayerHP2.texture_under = load("res://Sprites/Ui/HP Bars/C"+str(Global.currentCave)+"BarBottom.png")
+			$PlayerHP2.texture_over = load("res://Sprites/Ui/HP Bars/C"+str(Global.currentCave)+"BarTop.png")
+			$PlayerHP2.texture_progress = load("res://Sprites/Ui/HP Bars/C"+str(Global.currentCave)+"Bar.png")
+		else :
 			$PlayerHP2.texture_over = load("res://Sprites/Ui/HP Bars/OutsideBarTop.png")
 			$PlayerHP2.texture_under = load("res://Sprites/Ui/HP Bars/OutsideBarBottom.png")
 			$PlayerHP2.texture_progress = load("res://Sprites/Ui/HP Bars/OutsideBar.png")
-		"Cave1": 
-			$PlayerHP2.texture_under = load("res://Sprites/Ui/HP Bars/C1BarBottom.png")
-			$PlayerHP2.texture_over = load("res://Sprites/Ui/HP Bars/C1BarTop.png")
-			$PlayerHP2.texture_progress = load("res://Sprites/Ui/HP Bars/C1Bar.png")
-		"Cave2": 
-			$PlayerHP2.texture_under = load("res://Sprites/Ui/HP Bars/C2BarBottom.png")
-			$PlayerHP2.texture_over = load("res://Sprites/Ui/HP Bars/C2BarTop.png")
-			$PlayerHP2.texture_progress = load("res://Sprites/Ui/HP Bars/C2Bar.png")
+
 
 #Upgrade Handling
 func _Upgrade():

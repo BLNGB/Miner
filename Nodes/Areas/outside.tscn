@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://55koddjtc6jy" path="res://Nodes/Player/Player.tscn" id="2_ilwii"]
 [ext_resource type="PackedScene" uid="uid://co811uw06hg7c" path="res://Nodes/Objekts/Hauser/shop.tscn" id="3_y4m8j"]
 [ext_resource type="PackedScene" uid="uid://bqapwy2eg2vwf" path="res://Nodes/Objekts/Caves/CaveEntrance.tscn" id="4_lbt7u"]
-[ext_resource type="PackedScene" uid="uid://c3g3u8e8rn51w" path="res://Nodes/Ui/ui.tscn" id="6_7wnte"]
-[ext_resource type="PackedScene" uid="uid://uvs7k5tevakl" path="res://Nodes/Ui/CheatMenue.tscn" id="7_h5yvi"]
+[ext_resource type="PackedScene" uid="uid://c3g3u8e8rn51w" path="res://Sprites/Ui/Ui/ui.tscn" id="6_7wnte"]
+[ext_resource type="PackedScene" uid="uid://uvs7k5tevakl" path="res://Sprites/Ui/Ui/CheatMenue.tscn" id="7_h5yvi"]
 [ext_resource type="PackedScene" uid="uid://sahotgxx8wh4" path="res://Nodes/NPCs/WisdomSlime/wisdom_slime.tscn" id="8_4yn1q"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_alr20"]
