@@ -146,6 +146,8 @@ metadata/legendaryOreChance = 0.05
 position = Vector2(384, 551)
 metadata/Cave = "2"
 metadata/DmgOverTime = 2
+metadata/commonOreChance = 100.0
+metadata/legendaryOreChance = 0.01
 
 [node name="Cave3" parent="." instance=ExtResource("4_lbt7u")]
 position = Vector2(119.742, 421.04)

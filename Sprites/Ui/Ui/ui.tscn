@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c3g3u8e8rn51w"]
+[gd_scene load_steps=22 format=3 uid="uid://c3g3u8e8rn51w"]
 
 [ext_resource type="Script" path="res://Sprites/Ui/Ui/UI.gd" id="1_yrinb"]
 [ext_resource type="Texture2D" uid="uid://c82l4xk5yls6o" path="res://Sprites/Objekts/Ores/CommonOrs/CommonOreIcon.png" id="2_0q5d0"]
@@ -14,6 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://drykdunyr5gaw" path="res://Sprites/Ui/CostWindow.png" id="10_jpwqj"]
 [ext_resource type="Texture2D" uid="uid://bi8of06821xhc" path="res://Sprites/Ui/Spacer.png" id="11_30h3s"]
 [ext_resource type="Texture2D" uid="uid://db2um30yogu8p" path="res://Sprites/Ui/CostWindowError.png" id="12_glyv3"]
+[ext_resource type="Texture2D" uid="uid://vn2m4jtcwg68" path="res://Sprites/Ui/Ui/PreCaveWindow.png" id="15_0gh15"]
+[ext_resource type="Texture2D" uid="uid://b8cwxfe6tgaih" path="res://Sprites/Menues/CaveMenue/C1.PNG" id="16_1dnw3"]
+[ext_resource type="Texture2D" uid="uid://bh8epug00ykg3" path="res://Sprites/Ui/Ui/ExitButton.png" id="17_kckc3"]
+[ext_resource type="Texture2D" uid="uid://r740pvgmj8wi" path="res://Sprites/Ui/Ui/MenueButtons.png" id="18_tu57n"]
 
 [sub_resource type="Animation" id="Animation_cq1yj"]
 resource_name = "InsufficientFunds"
@@ -22,7 +26,7 @@ step = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/CostBox:texture")
+tracks/0/path = NodePath("Buttons/CostBox:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -34,7 +38,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Control/CostBox:position")
+tracks/1/path = NodePath("Buttons/CostBox:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -46,7 +50,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Control/CostBox:scale")
+tracks/2/path = NodePath("Buttons/CostBox:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -61,7 +65,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/CostBox:texture")
+tracks/0/path = NodePath("Buttons/CostBox:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -73,7 +77,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Control/CostBox:position")
+tracks/1/path = NodePath("Buttons/CostBox:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -85,7 +89,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Control/CostBox:scale")
+tracks/2/path = NodePath("Buttons/CostBox:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -174,7 +178,7 @@ scale = Vector2(0.5, 0.5)
 text = "0"
 metadata/_edit_use_anchors_ = true
 
-[node name="Control" type="Control" parent="."]
+[node name="Buttons" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_top = 320.0
@@ -182,7 +186,7 @@ offset_right = 192.0
 offset_bottom = 648.0
 metadata/_edit_lock_ = true
 
-[node name="Speed" type="TextureButton" parent="Control"]
+[node name="Speed" type="TextureButton" parent="Buttons"]
 layout_mode = 2
 offset_left = 32.0
 offset_top = 104.0
@@ -191,7 +195,7 @@ offset_bottom = 120.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("9_63nlo")
 
-[node name="SpeedL" type="Label" parent="Control/Speed"]
+[node name="SpeedL" type="Label" parent="Buttons/Speed"]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 4.0
@@ -200,7 +204,7 @@ offset_bottom = 27.0
 scale = Vector2(0.5, 0.5)
 text = "Lvl"
 
-[node name="HealthRegen" type="TextureButton" parent="Control"]
+[node name="HealthRegen" type="TextureButton" parent="Buttons"]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 144.0
@@ -209,7 +213,7 @@ offset_bottom = 160.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("8_tnkj3")
 
-[node name="HealthRegenL" type="Label" parent="Control/HealthRegen"]
+[node name="HealthRegenL" type="Label" parent="Buttons/HealthRegen"]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 4.0
@@ -218,7 +222,7 @@ offset_bottom = 27.0
 scale = Vector2(0.5, 0.5)
 text = "Lvl"
 
-[node name="Strength" type="TextureButton" parent="Control"]
+[node name="Strength" type="TextureButton" parent="Buttons"]
 layout_mode = 2
 offset_left = 32.0
 offset_top = 184.0
@@ -229,7 +233,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 texture_normal = ExtResource("7_sfpix")
 
-[node name="StrengthL" type="Label" parent="Control/Strength"]
+[node name="StrengthL" type="Label" parent="Buttons/Strength"]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 4.0
@@ -238,7 +242,7 @@ offset_bottom = 27.0
 scale = Vector2(0.5, 0.5)
 text = "Lvl"
 
-[node name="Resist" type="TextureButton" parent="Control"]
+[node name="Resist" type="TextureButton" parent="Buttons"]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 224.0
@@ -247,7 +251,7 @@ offset_bottom = 240.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("10_frr6w")
 
-[node name="ResistL" type="Label" parent="Control/Resist"]
+[node name="ResistL" type="Label" parent="Buttons/Resist"]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 4.0
@@ -256,7 +260,7 @@ offset_bottom = 27.0
 scale = Vector2(0.5, 0.5)
 text = "Lvl"
 
-[node name="Value" type="TextureButton" parent="Control"]
+[node name="Value" type="TextureButton" parent="Buttons"]
 layout_mode = 2
 offset_left = 32.0
 offset_top = 264.0
@@ -266,7 +270,7 @@ scale = Vector2(2, 2)
 size_flags_horizontal = 0
 texture_normal = ExtResource("8_7fmdw")
 
-[node name="ValueL" type="Label" parent="Control/Value"]
+[node name="ValueL" type="Label" parent="Buttons/Value"]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 4.0
@@ -275,13 +279,13 @@ offset_bottom = 27.0
 scale = Vector2(0.5, 0.5)
 text = "Lvl"
 
-[node name="CostBox" type="Sprite2D" parent="Control"]
+[node name="CostBox" type="Sprite2D" parent="Buttons"]
 visible = false
 position = Vector2(95, 24)
 scale = Vector2(2, 2)
 texture = ExtResource("10_jpwqj")
 
-[node name="Label" type="Label" parent="Control/CostBox"]
+[node name="Label" type="Label" parent="Buttons/CostBox"]
 offset_left = -10.0
 offset_top = -14.5
 offset_right = 30.0
@@ -290,11 +294,11 @@ scale = Vector2(0.5, 0.5)
 text = "Cost"
 metadata/_edit_use_anchors_ = true
 
-[node name="Ore" type="Sprite2D" parent="Control/CostBox"]
+[node name="Ore" type="Sprite2D" parent="Buttons/CostBox"]
 position = Vector2(-20, 4)
 texture = ExtResource("11_30h3s")
 
-[node name="Cost" type="Label" parent="Control/CostBox"]
+[node name="Cost" type="Label" parent="Buttons/CostBox"]
 offset_right = 40.0
 offset_bottom = 23.0
 scale = Vector2(0.5, 0.5)
@@ -322,21 +326,98 @@ offset_bottom = 59.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "100"
 
+[node name="PreCaveWindow" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 320.0
+offset_top = 128.0
+offset_right = 832.0
+offset_bottom = 512.0
+
+[node name="Window" type="Sprite2D" parent="PreCaveWindow"]
+position = Vector2(256, 192)
+texture = ExtResource("15_0gh15")
+
+[node name="CavePreView" type="Sprite2D" parent="PreCaveWindow"]
+position = Vector2(352, 116)
+scale = Vector2(0.1, 0.101662)
+texture = ExtResource("16_1dnw3")
+
+[node name="CaveInfoText" type="Label" parent="PreCaveWindow"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 1344.0
+offset_bottom = 1984.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "This is a dirt cave "
+
+[node name="ExitButton" type="TextureButton" parent="PreCaveWindow"]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 12.0
+offset_right = 500.0
+offset_bottom = 28.0
+texture_normal = ExtResource("17_kckc3")
+
+[node name="Exit" type="TextureButton" parent="PreCaveWindow"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 285.0
+offset_right = 243.0
+offset_bottom = 325.0
+texture_normal = ExtResource("18_tu57n")
+
+[node name="Label2" type="Label" parent="PreCaveWindow/Exit"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 883.0
+offset_bottom = 163.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "             Exit"
+
+[node name="Enter" type="TextureButton" parent="PreCaveWindow"]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 285.0
+offset_right = 451.0
+offset_bottom = 325.0
+texture_normal = ExtResource("18_tu57n")
+
+[node name="Label3" type="Label" parent="PreCaveWindow/Enter"]
+layout_mode = 0
+offset_left = 3.00003
+offset_top = 3.00002
+offset_right = 883.0
+offset_bottom = 163.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "            Enter"
+
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
-[connection signal="mouse_entered" from="Control" to="." method="_on_control_mouse_entered"]
-[connection signal="mouse_exited" from="Control" to="." method="_on_control_mouse_exited"]
-[connection signal="mouse_entered" from="Control/Speed" to="." method="_on_speed_mouse_entered"]
-[connection signal="mouse_exited" from="Control/Speed" to="." method="_on_speed_mouse_exited"]
-[connection signal="pressed" from="Control/Speed" to="." method="_on_speed_pressed"]
-[connection signal="mouse_entered" from="Control/HealthRegen" to="." method="_on_health_regen_mouse_entered"]
-[connection signal="mouse_exited" from="Control/HealthRegen" to="." method="_on_health_regen_mouse_exited"]
-[connection signal="pressed" from="Control/HealthRegen" to="." method="_on_health_regen_pressed"]
-[connection signal="mouse_entered" from="Control/Strength" to="." method="_on_strength_mouse_entered"]
-[connection signal="mouse_exited" from="Control/Strength" to="." method="_on_strength_mouse_exited"]
-[connection signal="pressed" from="Control/Strength" to="." method="_on_strength_pressed"]
-[connection signal="mouse_entered" from="Control/Resist" to="." method="_on_resist_mouse_entered"]
-[connection signal="mouse_exited" from="Control/Resist" to="." method="_on_resist_mouse_exited"]
-[connection signal="pressed" from="Control/Resist" to="." method="_on_resist_pressed"]
-[connection signal="mouse_entered" from="Control/Value" to="." method="_on_value_mouse_entered"]
-[connection signal="mouse_exited" from="Control/Value" to="." method="_on_value_mouse_exited"]
-[connection signal="pressed" from="Control/Value" to="." method="_on_value_pressed"]
+[connection signal="mouse_entered" from="Buttons" to="." method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons" to="." method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Speed" to="." method="_on_speed_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Speed" to="." method="_on_speed_mouse_exited"]
+[connection signal="pressed" from="Buttons/Speed" to="." method="_on_speed_pressed"]
+[connection signal="mouse_entered" from="Buttons/HealthRegen" to="." method="_on_health_regen_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/HealthRegen" to="." method="_on_health_regen_mouse_exited"]
+[connection signal="pressed" from="Buttons/HealthRegen" to="." method="_on_health_regen_pressed"]
+[connection signal="mouse_entered" from="Buttons/Strength" to="." method="_on_strength_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Strength" to="." method="_on_strength_mouse_exited"]
+[connection signal="pressed" from="Buttons/Strength" to="." method="_on_strength_pressed"]
+[connection signal="mouse_entered" from="Buttons/Resist" to="." method="_on_resist_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Resist" to="." method="_on_resist_mouse_exited"]
+[connection signal="pressed" from="Buttons/Resist" to="." method="_on_resist_pressed"]
+[connection signal="mouse_entered" from="Buttons/Value" to="." method="_on_value_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Value" to="." method="_on_value_mouse_exited"]
+[connection signal="pressed" from="Buttons/Value" to="." method="_on_value_pressed"]
+[connection signal="pressed" from="PreCaveWindow/ExitButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="PreCaveWindow/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="PreCaveWindow/Enter" to="." method="_on_enter_pressed"]

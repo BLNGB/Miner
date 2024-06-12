@@ -1,6 +1,7 @@
 extends Node
 
 var currentCave = 0
+var OverCaveEntrance = false
 
 var CommonOreCount = 0
 var UncommonOreCount = 0
