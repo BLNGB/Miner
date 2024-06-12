@@ -142,6 +142,11 @@ position = Vector2(384, 551)
 metadata/Cave = "Cave2"
 metadata/DmgOverTime = 2
 
+[node name="Cave3" parent="." instance=ExtResource("4_lbt7u")]
+position = Vector2(119.742, 421.04)
+metadata/Cave = "Cave3"
+metadata/DmgOverTime = 10
+
 [node name="UI" parent="." instance=ExtResource("6_7wnte")]
 
 [node name="CanvasLayer" parent="." instance=ExtResource("7_h5yvi")]
