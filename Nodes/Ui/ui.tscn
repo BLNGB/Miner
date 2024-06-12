@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c3g3u8e8rn51w"]
+[gd_scene load_steps=18 format=3 uid="uid://c3g3u8e8rn51w"]
 
 [ext_resource type="Script" path="res://Nodes/Ui/UI.gd" id="1_yrinb"]
 [ext_resource type="Texture2D" uid="uid://c82l4xk5yls6o" path="res://Sprites/Objekts/Ores/CommonOrs/CommonOreIcon.png" id="2_0q5d0"]
@@ -14,9 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://drykdunyr5gaw" path="res://Sprites/Ui/CostWindow.png" id="10_jpwqj"]
 [ext_resource type="Texture2D" uid="uid://bi8of06821xhc" path="res://Sprites/Ui/Spacer.png" id="11_30h3s"]
 [ext_resource type="Texture2D" uid="uid://db2um30yogu8p" path="res://Sprites/Ui/CostWindowError.png" id="12_glyv3"]
-[ext_resource type="Texture2D" uid="uid://n3aiiew8uxi7" path="res://Sprites/Ui/HP Bars/C1BarBottom.png" id="15_8rbgc"]
-[ext_resource type="Texture2D" uid="uid://k8jewb22sn6t" path="res://Sprites/Ui/HP Bars/C1BarTop.png" id="16_ebie7"]
-[ext_resource type="Texture2D" uid="uid://ci1q2rudb4tn" path="res://Sprites/Ui/HP Bars/C1Bar.png" id="17_dawwa"]
 
 [sub_resource type="Animation" id="Animation_cq1yj"]
 resource_name = "InsufficientFunds"
@@ -315,9 +312,6 @@ offset_top = -4.0
 offset_right = 768.0
 offset_bottom = 92.0
 value = 100.0
-texture_under = ExtResource("15_8rbgc")
-texture_over = ExtResource("16_ebie7")
-texture_progress = ExtResource("17_dawwa")
 
 [node name="PlayerHpL" type="Label" parent="PlayerHP2"]
 layout_mode = 0
@@ -325,7 +319,7 @@ offset_left = 178.0
 offset_top = 36.0
 offset_right = 206.0
 offset_bottom = 59.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "100"
 
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
