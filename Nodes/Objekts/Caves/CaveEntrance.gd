@@ -34,5 +34,5 @@ func _on_area_2d_body_entered(body):
 		Global.OverCaveEntrance = true
 
 
-func _on_area_2d_body_exited(body):
+func _on_area_2d_body_exited(_body):
 	Global.OverCaveEntrance = false

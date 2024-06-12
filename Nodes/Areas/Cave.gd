@@ -58,7 +58,6 @@ func oreGen():
 	var maxOre= 500
 	randomize()
 	
-	
 	var commonOreCount = 0
 	var uncommonOreCount = 0
 	var rareOreCount = 0
