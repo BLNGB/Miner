@@ -10,7 +10,5 @@ func _process(delta):
 	if delta == delta:
 		pass
 
-func _on_child_entered_tree(node):
-	
+func _on_child_entered_tree(_node):
 	Global.currentCave = 0
-	pass # Replace with function body.
