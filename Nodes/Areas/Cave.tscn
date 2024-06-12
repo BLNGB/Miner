@@ -36,3 +36,9 @@ position = Vector2(31, 24)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.152941, 0.152941, 0.152941, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(1176, 680, 1176, -24, 1168, -24, 1168, 672, -16, 672, -16, -16, 1168, -16, 1160, -24, -24, -24, -24, 680)
