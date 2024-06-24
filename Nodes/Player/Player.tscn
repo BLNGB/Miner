@@ -337,7 +337,6 @@ rotation = -6.28319
 [node name="Pickaxe" parent="Pickaxe" instance=ExtResource("4_hx48y")]
 
 [node name="DmgOverTime" type="Timer" parent="."]
-autostart = true
 
 [node name="Light" type="PointLight2D" parent="."]
 visible = false

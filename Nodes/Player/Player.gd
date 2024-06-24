@@ -52,6 +52,11 @@ func _ready():
 	$Pick.play("Idle")
 	Global.PlayerHp = 100
 	
+	if get_tree().current_scene.name.contains("Outside"):
+		$DmgOverTime.stop()
+	elif get_tree().current_scene.name.contains("Cave"):
+		$DmgOverTime.start()
+	
 func _physics_process(delta):
 	if delta == delta:
 		pass

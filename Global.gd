@@ -29,11 +29,11 @@ var CostVA = 1
 var CostSP = 1
 var CostHR = 1
 var CostRE = 1
-var CostSTScale = 1
-var CostVAScale = 1
-var CostSPScale = 1
-var CostHRScale = 1
-var CostREScale = 1
+var CostSTScale = 1.1
+var CostVAScale = 2
+var CostSPScale = 1.01
+var CostHRScale = 2
+var CostREScale = 1.01
 
 var CamLimitLeft = 0
 var CamLimitRight = 0
